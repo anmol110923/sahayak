@@ -13,7 +13,10 @@ const tamil = Noto_Sans_Tamil({ subsets: ["tamil"], weight: ["400", "500", "600"
 
 export const metadata: Metadata = {
   title: "Yojana Setu — Government Scheme Finder",
-  description: "Find the government schemes you may be eligible for, with clear reasons, document checklists and official links to apply.",
+  description: "Find the government schemes you may be eligible for, with clear reasons, document checklists and official links to apply. An initiative by Sahayak.",
+  applicationName: "Yojana Setu",
+  authors: [{ name: "Sahayak" }],
+  creator: "Sahayak",
   manifest: "/manifest.webmanifest",
   icons: { icon: [{ url: "/favicon.ico", sizes: "any" }, { url: "/icon.svg", type: "image/svg+xml" }], apple: "/apple-touch-icon.png" },
   appleWebApp: { capable: true, title: "Yojana Setu", statusBarStyle: "default" },

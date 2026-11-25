@@ -1,5 +1,7 @@
 # Yojana Setu (योजना सेतु): Project Guide and Q&A
 
+*Yojana Setu is an initiative by **Sahayak** (the project's original name, kept as the team/umbrella name).*
+
 A briefing for mentors and investors: what the project is, how it works, what has been built, and answers to the questions you are likely to get.
 
 **Live site:** https://yojana-setu-three.vercel.app

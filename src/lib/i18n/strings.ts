@@ -184,6 +184,8 @@ const S = {
   textSize: { hi: "अक्षर का आकार", en: "Text size" },
   quickLinks: { hi: "उपयोगी लिंक", en: "Quick links" },
 
+  bySahayak: { hi: "सहायक की एक पहल", en: "An initiative by Sahayak" },
+
   // Browse / detail
   allSchemes: { hi: "सभी योजनाएँ", en: "All schemes" },
   allSchemesSub: { hi: "केंद्र और राज्य सरकार की योजनाएँ, श्रेणी के अनुसार।", en: "Central and state government schemes by category." },

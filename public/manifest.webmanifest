@@ -1,7 +1,7 @@
 {
   "name": "Yojana Setu योजना सेतु — Government schemes for you",
   "short_name": "Yojana Setu",
-  "description": "Find government schemes you may be eligible for, in simple Hindi or English.",
+  "description": "Find government schemes you may be eligible for, in simple Hindi or English. An initiative by Sahayak.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",

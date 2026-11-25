@@ -147,6 +147,7 @@ const bn: Record<StringKey, string> = {
   notGovt: "স্বাধীন, বিনামূল্যের জনস্বার্থ পরিষেবা — এটি সরকারি ওয়েবসাইট নয়",
   textSize: "লেখার আকার",
   quickLinks: "দরকারি লিঙ্ক",
+  bySahayak: "সহায়ক-এর একটি উদ্যোগ",
   allSchemes: "সব প্রকল্প",
   allSchemesSub: "বিভাগ অনুযায়ী কেন্দ্র ও রাজ্য সরকারের প্রকল্প।",
   all: "সব",

@@ -147,6 +147,7 @@ const mr: Record<StringKey, string> = {
   notGovt: "स्वतंत्र, मोफत लोकहित सेवा — ही सरकारी वेबसाइट नाही",
   textSize: "अक्षरांचा आकार",
   quickLinks: "उपयुक्त दुवे",
+  bySahayak: "सहायकचा एक उपक्रम",
   allSchemes: "सर्व योजना",
   allSchemesSub: "श्रेणीनुसार केंद्र आणि राज्य सरकारच्या योजना.",
   all: "सर्व",

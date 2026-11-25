@@ -1,5 +1,7 @@
 # Yojana Setu · योजना सेतु
 
+*An initiative by **Sahayak**.*
+
 **Find the government schemes you may be eligible for, in English, Hindi, Bengali, Marathi or Tamil, with voice.**
 
 Many people in rural India never hear about the schemes meant for them, or can't search dozens of

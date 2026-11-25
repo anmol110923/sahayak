@@ -88,6 +88,7 @@ button { font: inherit; color: inherit; }
 .brand-text .brand-hi { font-family: var(--font-deva), var(--font); font-size: 1.3rem; font-weight: 700; color: var(--brand); }
 .brand-text .brand-en { font-size: 1rem; font-weight: 700; color: var(--ink); letter-spacing: 0.01em; }
 .brand-text small { font-size: 0.78rem; color: var(--muted); }
+.brand-by { color: var(--saffron); font-weight: 600; }
 .masthead-cta { display: flex; align-items: center; gap: 10px; }
 .navbar { background: var(--navy-800); }
 .navbar-inner { display: flex; align-items: stretch; gap: 2px; overflow-x: auto; scrollbar-width: none; }

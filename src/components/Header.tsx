@@ -85,7 +85,9 @@ export function Header() {
             <span className="brand-text">
               <span className="brand-hi">योजना सेतु</span>
               <span className="brand-en">Yojana Setu</span>
-              <small>{t("appTag")}</small>
+              <small>
+                {t("appTag")} · <span className="brand-by">{t("bySahayak")}</span>
+              </small>
             </span>
           </Link>
           <div className="masthead-cta">
@@ -142,7 +144,9 @@ export function Footer() {
           </div>
         </div>
         <div className="footer-bottom">
-          <span>{t("notGovt")}</span>
+          <span>
+            © {new Date().getFullYear()} Sahayak · {t("notGovt")}
+          </span>
           <span>{t("verifyNote")}</span>
         </div>
       </div>
