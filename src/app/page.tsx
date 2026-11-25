@@ -10,28 +10,14 @@ import { CATEGORIES } from "@/lib/core/types";
 import { DEMOS } from "@/lib/demo";
 import { SCHEMES } from "@/lib/schemes";
 import { loadProfile } from "@/lib/storage";
-import { useCssVar } from "@/lib/useCssVar";
 import CountUp from "@/components/reactbits/CountUp";
-import GradientText from "@/components/reactbits/GradientText";
-import ShinyText from "@/components/reactbits/ShinyText";
-import SpotlightCard from "@/components/reactbits/SpotlightCard";
 
 /** Business number for the WhatsApp bot, digits only with country code (e.g. 919876543210). */
 const WA_NUMBER = (process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "").replace(/\D/g, "");
 
-/** ReactBits SpotlightCard, themed with the app's CSS variables so it follows light and dark mode. */
-const SPOT = {
-  theme: "light" as const,
-  spotlightColor: "var(--spot)",
-  intensity: 0.5,
-  spotlightSize: 260,
-  style: { "--spotlight-card-surface": "var(--surface)", "--spotlight-card-border": "var(--line)", "--spotlight-card-shadow": "var(--shadow)" } as React.CSSProperties,
-};
 
 export default function Home() {
   const { t, tx } = useApp();
-  const brand = useCssVar("--brand", "#1747a6");
-  const shine = useCssVar("--shine", "#7aa2ff");
   const [state, setState] = useState<"new" | "partial" | "done">("new");
 
   useEffect(() => {
@@ -47,26 +33,19 @@ export default function Home() {
       <section className="hero">
         <div className="container hero-grid">
           <div className="hero-copy">
-            <span className="eyebrow eyebrow-brand">
-              <ShinyText text={t("heroEyebrow")} color={brand} shineColor={shine} speed={3} delay={1.5} />
-            </span>
-            <h1>
-              {t("heroTitleA")}{" "}
-              <GradientText className="hero-gradient" colors={["var(--grad-1)", "var(--grad-2)", "var(--grad-3)"]} animationSpeed={7}>
-                {t("heroTitleB")}
-              </GradientText>
-            </h1>
+            <span className="eyebrow hero-eyebrow">{t("heroEyebrow")}</span>
+            <h1>{t("heroTitle")}</h1>
             <p className="lead">{t("heroSub")}</p>
             <div className="hero-actions">
-              <Link href="/profile" className="btn btn-primary btn-lg">
+              <Link href="/profile" className="btn btn-accent btn-lg">
                 {state === "partial" ? t("continue") : t("start")} <ArrowRight size={18} aria-hidden />
               </Link>
               {state === "done" ? (
-                <Link href="/results" className="btn btn-ghost btn-lg">
+                <Link href="/results" className="btn btn-outline-light btn-lg">
                   {t("seeResults")}
                 </Link>
               ) : (
-                <Link href="/schemes" className="btn btn-ghost btn-lg">
+                <Link href="/schemes" className="btn btn-outline-light btn-lg">
                   {t("browseAll")}
                 </Link>
               )}
@@ -111,14 +90,14 @@ export default function Home() {
             { icon: FileCheck2, title: t("step2Title"), body: t("step2") },
             { icon: Landmark, title: t("step3Title"), body: t("step3") },
           ].map((s, i) => (
-            <SpotlightCard key={i} {...SPOT} className="card feature">
+            <div key={i} className="card feature">
               <span className="feature-icon">
                 <s.icon size={20} strokeWidth={1.8} aria-hidden />
               </span>
               <span className="feature-step">0{i + 1}</span>
               <h3>{s.title}</h3>
               <p className="muted">{s.body}</p>
-            </SpotlightCard>
+            </div>
           ))}
         </div>
       </section>
@@ -132,7 +111,7 @@ export default function Home() {
         </div>
         <div className="grid-4">
           {Object.entries(DEMOS).map(([key, d]) => (
-            <SpotlightCard key={key} {...SPOT} className="card demo-card">
+            <div key={key} className="card demo-card">
               <Link href={`/results?demo=${key}`} className="demo-link">
                 <span className="demo-avatar">
                   <UserRound size={18} aria-hidden />
@@ -143,7 +122,7 @@ export default function Home() {
                   {t("viewResults")} <ArrowRight size={14} aria-hidden />
                 </span>
                 </Link>
-            </SpotlightCard>
+            </div>
           ))}
         </div>
       </section>
@@ -165,7 +144,7 @@ export default function Home() {
 
       <section className="section container">
         {WA_NUMBER && (
-          <SpotlightCard {...SPOT} className="card wa-card">
+          <div className="card wa-card">
             <span className="feature-icon">
               <MessageCircle size={20} strokeWidth={1.8} aria-hidden />
             </span>
@@ -176,9 +155,9 @@ export default function Home() {
             <a className="btn btn-primary" href={`https://wa.me/${WA_NUMBER}?text=Hi`} target="_blank" rel="noopener noreferrer">
               {t("waCta")} <ArrowRight size={16} aria-hidden />
             </a>
-          </SpotlightCard>
+          </div>
         )}
-        <SpotlightCard {...SPOT} className="card trust">
+        <div className="card trust">
           <div>
             <h2 className="section-title">{t("trustTitle")}</h2>
             <p className="muted">{t("helperNote")}</p>
@@ -196,7 +175,7 @@ export default function Home() {
               </li>
             ))}
           </ul>
-        </SpotlightCard>
+        </div>
       </section>
     </>
   );

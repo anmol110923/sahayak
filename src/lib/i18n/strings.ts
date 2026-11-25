@@ -179,6 +179,11 @@ const S = {
   voiceAgeHint: { hi: "अपनी उम्र बोलें, जैसे “पैंतीस” या “35”", en: "Say your age, like “thirty five” or “35”" },
   language: { hi: "भाषा", en: "Language" },
 
+  skipToMain: { hi: "मुख्य सामग्री पर जाएँ", en: "Skip to main content" },
+  notGovt: { hi: "स्वतंत्र, निःशुल्क जनहित सेवा — यह सरकारी वेबसाइट नहीं है", en: "Independent, free public-interest service — not a government website" },
+  textSize: { hi: "अक्षर का आकार", en: "Text size" },
+  quickLinks: { hi: "उपयोगी लिंक", en: "Quick links" },
+
   // Browse / detail
   allSchemes: { hi: "सभी योजनाएँ", en: "All schemes" },
   allSchemesSub: { hi: "केंद्र और राज्य सरकार की योजनाएँ, श्रेणी के अनुसार।", en: "Central and state government schemes by category." },

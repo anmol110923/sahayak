@@ -1,12 +1,15 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Noto_Sans_Devanagari } from "next/font/google";
+import { Noto_Sans, Noto_Sans_Bengali, Noto_Sans_Devanagari, Noto_Sans_Tamil } from "next/font/google";
 import "./globals.css";
 import { AppProvider } from "@/components/AppProvider";
 import { Footer, Header } from "@/components/Header";
 import { SWRegister } from "@/components/SWRegister";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-latin", display: "swap" });
+// One type family (Noto Sans) across all five languages for a consistent, formal look.
+const latin = Noto_Sans({ subsets: ["latin"], weight: ["400", "500", "600", "700"], variable: "--font-latin", display: "swap" });
 const devanagari = Noto_Sans_Devanagari({ subsets: ["devanagari"], weight: ["400", "500", "600", "700"], variable: "--font-deva", display: "swap" });
+const bengali = Noto_Sans_Bengali({ subsets: ["bengali"], weight: ["400", "500", "600", "700"], variable: "--font-beng", display: "swap", preload: false });
+const tamil = Noto_Sans_Tamil({ subsets: ["tamil"], weight: ["400", "500", "600", "700"], variable: "--font-taml", display: "swap", preload: false });
 
 export const metadata: Metadata = {
   title: "Yojana Setu — Government Scheme Finder",
@@ -19,19 +22,17 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
-    { media: "(prefers-color-scheme: dark)", color: "#0e1420" },
-  ],
+  colorScheme: "light",
+  themeColor: "#0a2240",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${inter.variable} ${devanagari.variable}`}>
+    <html lang="en" className={`${latin.variable} ${devanagari.variable} ${bengali.variable} ${tamil.variable}`}>
       <body>
         <AppProvider>
           <Header />
-          <main>{children}</main>
+          <main id="main">{children}</main>
           <Footer />
           <SWRegister />
         </AppProvider>

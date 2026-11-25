@@ -28,9 +28,11 @@ npm run validate:data  # run after ANY edit to data/schemes.json
 - **Optional AI**: Google Gemini free tier (`GEMINI_API_KEY` in `.env`), or Groq as an alternative. The model chain is
   `GEMINI_MODEL` → `gemini-flash-lite-latest` → `gemini-flash-latest`. Use the `-latest` aliases because specific Gemini versions get retired.
 - **Voice**: the browser's Web Speech API (free, no key). "Listen" reads results and schemes aloud, and "Dictate" fills the free-text need box.
-- Plain CSS in `src/app/globals.css` (no Tailwind, no UI kit) and `lucide-react` for icons. A few **ReactBits** components
-  (TS + CSS variants, in `src/components/reactbits/`) add motion: SpotlightCard, CountUp, GradientText, ShinyText.
-  Theme them with the app's CSS variables (ShinyText computes colors in JS, so pass resolved values via `useCssVar`).
+- Plain CSS in `src/app/globals.css` (no Tailwind, no UI kit) and `lucide-react` for icons. One ReactBits component
+  (`src/components/reactbits/CountUp.tsx`) animates the home-page stats.
+- **Look:** formal public-service portal: navy (`--brand`, `--navy-800/900`), saffron accents, India green, white surfaces,
+  small radii, Noto Sans in every script. **Light mode only.** A utility bar always says it is *not a government website*;
+  never add government emblems, "Government of India" wording or anything that could pass as an official site.
 - **OCR**: Tesseract.js (eng + hin) in the browser, loaded only when the user taps "Scan a document". `src/lib/core/ocr-extract.ts`
   turns the text into profile answers; Aadhaar-shaped and other long numbers are stripped first, and the user confirms each field.
 - **WhatsApp bot**: Meta WhatsApp Cloud API webhook at `/api/whatsapp`. The bot (`src/lib/whatsapp/bot.ts`) is pure and stateless:
@@ -99,6 +101,6 @@ scripts/validate-data.ts
 - **Design rules (from the user):** professional look, **no emojis anywhere** (use `lucide-react` icons), and keep the form
   to **two steps** (`step: 1 | 2` on each field in `fields.ts`) with compact controls: selects, segmented buttons, Yes/No toggles.
   Every field is optional; blank means "unknown". The default language is English, with a Hindi toggle in the header.
-- Styling: CSS variables in `globals.css` (light and dark), Inter + Noto Sans Devanagari via `next/font`, responsive from 390px
+- Styling: CSS variables in `globals.css` (light only), Noto Sans (Latin, Devanagari, Bengali, Tamil) via `next/font`, responsive from 390px
   phones to desktop (results and detail pages get a sidebar at ≥900px).
 - Before saying something is done, run `npm run typecheck`, `npm run validate:data` and `npm run build`.
