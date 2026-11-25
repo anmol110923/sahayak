@@ -1,0 +1,1261 @@
+[
+  {
+    "id": "pm-kisan",
+    "level": "central", "states": [],
+    "name": { "en": "PM-KISAN Samman Nidhi", "hi": "पीएम-किसान सम्मान निधि" },
+    "ministry": "Ministry of Agriculture & Farmers Welfare",
+    "categories": ["farming"],
+    "benefit": { "en": "₹6,000 a year, paid as 3 instalments of ₹2,000 directly into your bank account.", "hi": "हर साल ₹6,000, ₹2,000 की 3 किस्तों में सीधे बैंक खाते में।" },
+    "description": { "en": "Income support for farmer families who own farm land.", "hi": "खेती की ज़मीन वाले किसान परिवारों को आर्थिक मदद।" },
+    "benefitValue": 6000,
+    "eligibility": { "all": [
+      { "field": "occupation", "op": "in", "value": ["farmer"] },
+      { "field": "land", "op": "gte", "value": 0.01 },
+      { "field": "taxPayer", "op": "eq", "value": false }
+    ] },
+    "conditions": [
+      { "en": "The land must be in your name in the land records.", "hi": "ज़मीन के रिकॉर्ड में ज़मीन आपके नाम पर होनी चाहिए।" },
+      { "en": "Families with a government employee, or a pensioner getting ₹10,000+ a month, cannot apply.", "hi": "जिस परिवार में सरकारी कर्मचारी हो, या ₹10,000+ महीना पेंशन पाने वाला हो, वह आवेदन नहीं कर सकता।" },
+      { "en": "e-KYC with Aadhaar is compulsory.", "hi": "आधार से e-KYC ज़रूरी है।" }
+    ],
+    "documents": ["aadhaar", "bank_passbook", "land_records", "mobile"],
+    "channels": ["online", "csc"],
+    "applyUrl": "https://pmkisan.gov.in/",
+    "sourceUrl": "https://pmkisan.gov.in/",
+    "helpline": "155261",
+    "lastReviewed": "2026-11-17"
+  },
+  {
+    "id": "pmfby",
+    "level": "central", "states": [],
+    "name": { "en": "Pradhan Mantri Fasal Bima Yojana (Crop Insurance)", "hi": "प्रधानमंत्री फसल बीमा योजना" },
+    "ministry": "Ministry of Agriculture & Farmers Welfare",
+    "categories": ["farming", "insurance"],
+    "benefit": { "en": "Insurance for your crop against drought, flood, pests and bad weather. You pay only 2% (kharif), 1.5% (rabi) or 5% (commercial crops) as premium.", "hi": "सूखा, बाढ़, कीड़े और ख़राब मौसम से फसल का बीमा। आपको सिर्फ़ 2% (खरीफ़), 1.5% (रबी) या 5% (व्यावसायिक फसल) प्रीमियम देना होता है।" },
+    "description": { "en": "Protects farmers, including tenant and sharecropping farmers, from crop loss.", "hi": "किसानों, बटाईदारों सहित, को फसल के नुकसान से बचाता है।" },
+    "benefitValue": 20000,
+    "eligibility": { "field": "occupation", "op": "in", "value": ["farmer", "tenant_farmer"] },
+    "conditions": [
+      { "en": "Apply before the last date of each crop season.", "hi": "हर फसल मौसम की आख़िरी तारीख़ से पहले आवेदन करें।" }
+    ],
+    "documents": ["aadhaar", "bank_passbook", "land_records", "sowing_certificate"],
+    "channels": ["online", "csc", "bank"],
+    "applyUrl": "https://pmfby.gov.in/",
+    "sourceUrl": "https://pmfby.gov.in/",
+    "helpline": "14447",
+    "lastReviewed": "2026-11-17"
+  },
+  {
+    "id": "kcc",
+    "level": "central", "states": [],
+    "name": { "en": "Kisan Credit Card (KCC)", "hi": "किसान क्रेडिट कार्ड (KCC)" },
+    "ministry": "Ministry of Agriculture & Farmers Welfare / Banks",
+    "categories": ["farming", "business"],
+    "benefit": { "en": "Easy bank loan for farming, dairy or fishing at low interest — as low as 4% a year if you repay on time.", "hi": "खेती, पशुपालन या मछली पालन के लिए आसान बैंक लोन, कम ब्याज पर — समय पर चुकाने पर सिर्फ़ 4% सालाना।" },
+    "description": { "en": "A credit card from the bank to buy seeds, fertiliser, feed and other farm needs.", "hi": "बीज, खाद, चारा और खेती की ज़रूरतों के लिए बैंक से मिलने वाला कार्ड।" },
+    "benefitValue": 10000,
+    "eligibility": { "field": "occupation", "op": "in", "value": ["farmer", "tenant_farmer", "fisher", "livestock"] },
+    "conditions": [],
+    "documents": ["aadhaar", "land_records", "photo", "bank_passbook"],
+    "channels": ["bank", "online"],
+    "applyUrl": "https://www.myscheme.gov.in/schemes/kcc",
+    "sourceUrl": "https://www.myscheme.gov.in/schemes/kcc",
+    "lastReviewed": "2026-11-17"
+  },
+  {
+    "id": "pm-kmy",
+    "level": "central", "states": [],
+    "name": { "en": "PM Kisan Maan-Dhan Yojana (Farmer Pension)", "hi": "पीएम किसान मान-धन योजना (किसान पेंशन)" },
+    "ministry": "Ministry of Agriculture & Farmers Welfare",
+    "categories": ["pension", "farming"],
+    "benefit": { "en": "₹3,000 per month pension after age 60. You pay ₹55–200 a month (depends on age) and the government adds the same amount.", "hi": "60 साल के बाद हर महीने ₹3,000 पेंशन। आप हर महीने ₹55–200 (उम्र के हिसाब से) जमा करते हैं, उतना ही सरकार जोड़ती है।" },
+    "description": { "en": "Voluntary pension scheme for small and marginal farmers.", "hi": "छोटे और सीमांत किसानों के लिए पेंशन योजना।" },
+    "benefitValue": 12000,
+    "eligibility": { "all": [
+      { "field": "occupation", "op": "in", "value": ["farmer"] },
+      { "field": "age", "op": "between", "value": [18, 40] },
+      { "field": "land", "op": "lte", "value": 2 },
+      { "field": "land", "op": "gte", "value": 0.01 },
+      { "field": "taxPayer", "op": "eq", "value": false }
+    ] },
+    "conditions": [],
+    "documents": ["aadhaar", "bank_passbook", "land_records"],
+    "channels": ["csc", "online"],
+    "applyUrl": "https://maandhan.in/",
+    "sourceUrl": "https://maandhan.in/",
+    "lastReviewed": "2026-11-17"
+  },
+  {
+    "id": "pm-kusum",
+    "level": "central", "states": [],
+    "name": { "en": "PM-KUSUM (Solar Pumps for Farmers)", "hi": "पीएम-कुसुम (किसानों के लिए सोलर पंप)" },
+    "ministry": "Ministry of New & Renewable Energy",
+    "categories": ["farming", "utilities"],
+    "benefit": { "en": "Large subsidy (usually 60% or more, centre + state) to install a solar water pump or solarise your farm pump.", "hi": "सोलर पंप लगाने या खेत के पंप को सोलर करने पर भारी सब्सिडी (आम तौर पर 60% या ज़्यादा, केंद्र + राज्य)।" },
+    "description": { "en": "Cuts diesel and electricity costs for irrigation.", "hi": "सिंचाई का डीज़ल और बिजली खर्च कम करता है।" },
+    "benefitValue": 50000,
+    "eligibility": { "all": [
+      { "field": "occupation", "op": "in", "value": ["farmer"] },
+      { "field": "land", "op": "gte", "value": 0.01 }
+    ] },
+    "conditions": [
+      { "en": "Applications are taken by your state's energy/agriculture department when slots open.", "hi": "आवेदन आपके राज्य का ऊर्जा/कृषि विभाग तभी लेता है जब स्लॉट खुलते हैं।" }
+    ],
+    "documents": ["aadhaar", "land_records", "bank_passbook"],
+    "channels": ["online", "district_office"],
+    "applyUrl": "https://pmkusum.mnre.gov.in/",
+    "sourceUrl": "https://pmkusum.mnre.gov.in/",
+    "lastReviewed": "2026-11-17"
+  },
+  {
+    "id": "soil-health-card",
+    "level": "central", "states": [],
+    "name": { "en": "Soil Health Card", "hi": "मृदा स्वास्थ्य कार्ड" },
+    "ministry": "Ministry of Agriculture & Farmers Welfare",
+    "categories": ["farming"],
+    "benefit": { "en": "Free soil testing and a card that tells you which fertiliser and how much to use.", "hi": "मुफ़्त मिट्टी जाँच और एक कार्ड जो बताता है कि कौन-सी खाद कितनी डालें।" },
+    "description": { "en": "Helps increase yield and save money on fertiliser.", "hi": "पैदावार बढ़ाने और खाद का पैसा बचाने में मदद।" },
+    "benefitValue": 1000,
+    "eligibility": { "field": "occupation", "op": "in", "value": ["farmer", "tenant_farmer"] },
+    "conditions": [],
+    "documents": ["aadhaar", "land_records"],
+    "channels": ["district_office", "online"],
+    "applyUrl": "https://soilhealth.dac.gov.in/",
+    "sourceUrl": "https://soilhealth.dac.gov.in/",
+    "lastReviewed": "2026-11-17"
+  },
+  {
+    "id": "pmmsy",
+    "level": "central", "states": [],
+    "name": { "en": "PM Matsya Sampada Yojana (Fisheries)", "hi": "प्रधानमंत्री मत्स्य संपदा योजना" },
+    "ministry": "Department of Fisheries",
+    "categories": ["farming", "business"],
+    "benefit": { "en": "40% subsidy (60% for SC/ST and women) for fish ponds, boats, nets, cold storage and other fishing projects.", "hi": "मछली तालाब, नाव, जाल, कोल्ड स्टोरेज आदि पर 40% सब्सिडी (SC/ST और महिलाओं को 60%)।" },
+    "description": { "en": "Support for fishers and fish farmers to grow income.", "hi": "मछुआरों और मछली पालकों की आय बढ़ाने के लिए मदद।" },
+    "benefitValue": 40000,
+    "eligibility": { "field": "occupation", "op": "in", "value": ["fisher"] },
+    "conditions": [],
+    "documents": ["aadhaar", "bank_passbook", "project_report", "caste_cert"],
+    "channels": ["district_office", "online"],
+    "applyUrl": "https://pmmsy.dof.gov.in/",
+    "sourceUrl": "https://pmmsy.dof.gov.in/",
+    "lastReviewed": "2026-11-17"
+  },
+  {
+    "id": "pm-jay",
+    "level": "central", "states": [],
+    "name": { "en": "Ayushman Bharat PM-JAY (Health Card)", "hi": "आयुष्मान भारत पीएम-जय (आयुष्मान कार्ड)" },
+    "ministry": "Ministry of Health & Family Welfare / NHA",
+    "categories": ["health"],
+    "benefit": { "en": "Free treatment up to ₹5 lakh per family every year in listed government and private hospitals.", "hi": "हर साल परिवार को ₹5 लाख तक का मुफ़्त इलाज, सूचीबद्ध सरकारी और प्राइवेट अस्पतालों में।" },
+    "description": { "en": "Health cover for poor and vulnerable families. Covers hospital stay, surgery and medicines.", "hi": "ग़रीब परिवारों के लिए स्वास्थ्य बीमा। अस्पताल में भर्ती, ऑपरेशन और दवाइयाँ शामिल।" },
+    "benefitValue": 500000,
+    "eligibility": { "all": [
+      { "field": "taxPayer", "op": "eq", "value": false },
+      { "any": [
+        { "field": "rationCard", "op": "in", "value": ["aay", "phh"] },
+        { "field": "income", "op": "lte", "value": 100000 }
+      ] }
+    ] },
+    "conditions": [
+      { "en": "Your family must be in the PM-JAY list (SECC 2011 data or your state's list). Check your name on the website or at the CSC.", "hi": "आपका परिवार पीएम-जय सूची (SECC 2011 या राज्य की सूची) में होना चाहिए। वेबसाइट या CSC पर अपना नाम जाँचें।" }
+    ],
+    "documents": ["aadhaar", "ration_card", "mobile"],
+    "channels": ["online", "csc", "health_centre"],
+    "applyUrl": "https://beneficiary.nha.gov.in/",
+    "sourceUrl": "https://nha.gov.in/PM-JAY",
+    "helpline": "14555",
+    "lastReviewed": "2026-11-17"
+  },
+  {
+    "id": "ayushman-vay-vandana",
+    "level": "central", "states": [],
+    "name": { "en": "Ayushman Vay Vandana Card (Age 70+)", "hi": "आयुष्मान वय वंदना कार्ड (70+ उम्र)" },
+    "ministry": "Ministry of Health & Family Welfare / NHA",
+    "categories": ["health"],
+    "benefit": { "en": "Free treatment up to ₹5 lakh a year for every person aged 70 or more — rich or poor.", "hi": "70 साल या उससे ज़्यादा उम्र के हर व्यक्ति को हर साल ₹5 लाख तक मुफ़्त इलाज — आय कोई भी हो।" },
+    "description": { "en": "Health cover for all senior citizens aged 70+, regardless of income.", "hi": "70+ उम्र के सभी बुज़ुर्गों के लिए स्वास्थ्य बीमा, आय की कोई शर्त नहीं।" },
+    "benefitValue": 500000,
+    "eligibility": { "field": "age", "op": "gte", "value": 70 },
+    "conditions": [],
+    "documents": ["aadhaar", "mobile"],
+    "channels": ["online", "csc", "health_centre"],
+    "applyUrl": "https://beneficiary.nha.gov.in/",
+    "sourceUrl": "https://nha.gov.in/",
+    "helpline": "14555",
+    "lastReviewed": "2026-11-17"
+  },
+  {
+    "id": "pmay-g",
+    "level": "central", "states": [],
+    "name": { "en": "PM Awas Yojana – Gramin (Rural Housing)", "hi": "प्रधानमंत्री आवास योजना – ग्रामीण" },
+    "ministry": "Ministry of Rural Development",
+    "categories": ["housing"],
+    "benefit": { "en": "₹1.20 lakh (plains) or ₹1.30 lakh (hilly areas) to build a pucca house, plus 90–95 days of MGNREGA wages and help for a toilet.", "hi": "पक्का घर बनाने के लिए ₹1.20 लाख (मैदानी) या ₹1.30 लाख (पहाड़ी इलाका), साथ में 90–95 दिन की मनरेगा मज़दूरी और शौचालय के लिए मदद।" },
+    "description": { "en": "For rural families who have no house or live in a kutcha house.", "hi": "गाँव के उन परिवारों के लिए जिनके पास घर नहीं या कच्चा घर है।" },
+    "benefitValue": 120000,
+    "eligibility": { "all": [
+      { "field": "area", "op": "eq", "value": "rural" },
+      { "field": "house", "op": "in", "value": ["kutcha", "none"] },
+      { "field": "taxPayer", "op": "eq", "value": false }
+    ] },
+    "conditions": [
+      { "en": "Your family must be in the PMAY-G list (Awaas+ survey) made through the Gram Panchayat.", "hi": "आपका परिवार ग्राम पंचायत द्वारा बनी PMAY-G सूची (आवास+ सर्वे) में होना चाहिए।" }
+    ],
+    "documents": ["aadhaar", "bank_passbook", "job_card", "photo"],
+    "channels": ["gram_panchayat", "online"],
+    "applyUrl": "https://pmayg.nic.in/",
+    "sourceUrl": "https://pmayg.nic.in/",
+    "helpline": "1800-11-6446",
+    "lastReviewed": "2026-11-17"
+  },
+  {
+    "id": "pmay-u",
+    "level": "central", "states": [],
+    "name": { "en": "PM Awas Yojana – Urban 2.0", "hi": "प्रधानमंत्री आवास योजना – शहरी 2.0" },
+    "ministry": "Ministry of Housing & Urban Affairs",
+    "categories": ["housing"],
+    "benefit": { "en": "Help of up to ₹2.5 lakh to build, buy or rent a pucca house in a town or city.", "hi": "शहर या कस्बे में पक्का घर बनाने, ख़रीदने या किराए पर लेने के लिए ₹2.5 लाख तक की मदद।" },
+    "description": { "en": "For urban families with income up to ₹9 lakh a year who do not own a pucca house.", "hi": "शहरी परिवार जिनकी सालाना आय ₹9 लाख तक है और जिनके पास पक्का घर नहीं है।" },
+    "benefitValue": 250000,
+    "eligibility": { "all": [
+      { "field": "area", "op": "eq", "value": "urban" },
+      { "field": "house", "op": "in", "value": ["kutcha", "none"] },
+      { "field": "income", "op": "lte", "value": 900000 }
+    ] },
+    "conditions": [
+      { "en": "No one in the family should own a pucca house anywhere in India.", "hi": "परिवार में किसी के पास भारत में कहीं भी पक्का घर नहीं होना चाहिए।" }
+    ],
+    "documents": ["aadhaar", "income_cert", "bank_passbook", "residence_proof"],
+    "channels": ["online", "csc"],
+    "applyUrl": "https://pmay-urban.gov.in/",
+    "sourceUrl": "https://pmay-urban.gov.in/",
+    "lastReviewed": "2026-11-17"
+  },
+  {
+    "id": "pmuy",
+    "level": "central", "states": [],
+    "name": { "en": "PM Ujjwala Yojana (Free LPG Connection)", "hi": "प्रधानमंत्री उज्ज्वला योजना (मुफ़्त गैस कनेक्शन)" },
+    "ministry": "Ministry of Petroleum & Natural Gas",
+    "categories": ["utilities", "women_child"],
+    "benefit": { "en": "Free LPG connection with stove and first refill, plus ₹300 subsidy on each refill (up to 9 a year).", "hi": "चूल्हे और पहली रिफ़िल के साथ मुफ़्त गैस कनेक्शन, और हर रिफ़िल पर ₹300 सब्सिडी (साल में 9 तक)।" },
+    "description": { "en": "Clean cooking gas for women of poor households.", "hi": "ग़रीब परिवारों की महिलाओं के लिए साफ़ रसोई गैस।" },
+    "benefitValue": 4000,
+    "eligibility": { "all": [
+      { "field": "gender", "op": "eq", "value": "female" },
+      { "field": "age", "op": "gte", "value": 18 },
+      { "field": "hasLpg", "op": "eq", "value": false },
+      { "any": [
+        { "field": "rationCard", "op": "in", "value": ["aay", "phh"] },
+        { "field": "category", "op": "in", "value": ["sc", "st"] },
+        { "field": "income", "op": "lte", "value": 100000 }
+      ] }
+    ] },
+    "conditions": [
+      { "en": "No one in the household should already have an LPG connection.", "hi": "घर में किसी के नाम पर पहले से गैस कनेक्शन नहीं होना चाहिए।" }
+    ],
+    "documents": ["aadhaar", "ration_card", "bank_passbook", "photo"],
+    "channels": ["online", "csc"],
+    "applyUrl": "https://pmuy.gov.in/",
+    "sourceUrl": "https://pmuy.gov.in/",
+    "helpline": "1906",
+    "lastReviewed": "2026-11-17"
+  },
+  {
+    "id": "pm-surya-ghar",
+    "level": "central", "states": [],
+    "name": { "en": "PM Surya Ghar Muft Bijli Yojana (Rooftop Solar)", "hi": "पीएम सूर्य घर मुफ़्त बिजली योजना (छत पर सोलर)" },
+    "ministry": "Ministry of New & Renewable Energy",
+    "categories": ["utilities"],
+    "benefit": { "en": "Subsidy up to ₹78,000 to put solar panels on your roof, and up to 300 units of free electricity every month.", "hi": "छत पर सोलर पैनल लगाने के लिए ₹78,000 तक की सब्सिडी, और हर महीने 300 यूनिट तक मुफ़्त बिजली।" },
+    "description": { "en": "Lowers or removes your electricity bill.", "hi": "बिजली का बिल कम या ख़त्म करता है।" },
+    "benefitValue": 30000,
+    "eligibility": { "field": "house", "op": "eq", "value": "pucca" },
+    "conditions": [
+      { "en": "You need your own house with a suitable roof and a valid electricity connection.", "hi": "अपना घर, सही छत और वैध बिजली कनेक्शन होना चाहिए।" }
+    ],
+    "documents": ["aadhaar", "electricity_bill", "bank_passbook"],
+    "channels": ["online"],
+    "applyUrl": "https://pmsuryaghar.gov.in/",
+    "sourceUrl": "https://pmsuryaghar.gov.in/",
+    "helpline": "15555",
+    "lastReviewed": "2026-11-17"
+  },
+  {
+    "id": "sbm-g",
+    "level": "central", "states": [],
+    "name": { "en": "Swachh Bharat Mission – Gramin (Toilet)", "hi": "स्वच्छ भारत मिशन – ग्रामीण (शौचालय)" },
+    "ministry": "Ministry of Jal Shakti",
+    "categories": ["utilities", "housing"],
+    "benefit": { "en": "₹12,000 to build a toilet at home.", "hi": "घर में शौचालय बनाने के लिए ₹12,000।" },
+    "description": { "en": "For rural families without a toilet.", "hi": "गाँव के उन परिवारों के लिए जिनके घर में शौचालय नहीं है।" },
+    "benefitValue": 12000,
+    "eligibility": { "all": [
+      { "field": "area", "op": "eq", "value": "rural" },
+      { "field": "hasToilet", "op": "eq", "value": false },
+      { "any": [
+        { "field": "rationCard", "op": "in", "value": ["aay", "phh"] },
+        { "field": "category", "op": "in", "value": ["sc", "st"] },
+        { "field": "occupation", "op": "in", "value": ["agri_labourer", "daily_wage"] },
+        { "field": "land", "op": "lte", "value": 2 },
+        { "field": "disability", "op": "gte", "value": 40 },
+        { "field": "maritalStatus", "op": "eq", "value": "widowed" }
+      ] }
+    ] },
+    "conditions": [],
+    "documents": ["aadhaar", "bank_passbook", "photo"],
+    "channels": ["gram_panchayat", "online"],
+    "applyUrl": "https://sbm.gov.in/",
+    "sourceUrl": "https://sbm.gov.in/",
+    "lastReviewed": "2026-11-17"
+  },
+  {
+    "id": "mgnrega",
+    "level": "central", "states": [],
+    "name": { "en": "Rural Employment Guarantee (MGNREGA job card)", "hi": "ग्रामीण रोज़गार गारंटी (मनरेगा जॉब कार्ड)" },
+    "ministry": "Ministry of Rural Development",
+    "categories": ["jobs"],
+    "benefit": { "en": "Guaranteed paid work near your village every year (100 days per household under MGNREGA) at your state's notified wage.", "hi": "हर साल गाँव के पास गारंटी वाला मज़दूरी का काम (मनरेगा में प्रति परिवार 100 दिन), राज्य की तय मज़दूरी पर।" },
+    "description": { "en": "Any adult in a rural household who is willing to do manual work can get a job card.", "hi": "गाँव के परिवार का कोई भी वयस्क जो शारीरिक काम करना चाहता है, जॉब कार्ड बनवा सकता है।" },
+    "benefitValue": 25000,
+    "eligibility": { "all": [
+      { "field": "area", "op": "eq", "value": "rural" },
+      { "field": "age", "op": "gte", "value": 18 }
+    ] },
+    "conditions": [
+      { "en": "Rules and the number of work days can change — ask your Gram Panchayat for the current rural employment scheme.", "hi": "नियम और काम के दिन बदल सकते हैं — मौजूदा ग्रामीण रोज़गार योजना के बारे में ग्राम पंचायत से पूछें।" }
+    ],
+    "documents": ["aadhaar", "photo", "bank_passbook"],
+    "channels": ["gram_panchayat"],
+    "applyUrl": "https://nrega.nic.in/",
+    "sourceUrl": "https://rural.gov.in/",
+    "lastReviewed": "2026-11-17"
+  },
+  {
+    "id": "nfsa-ration",
+    "level": "central", "states": [],
+    "name": { "en": "Ration Card – Free Food Grains (NFSA / PMGKAY)", "hi": "राशन कार्ड – मुफ़्त अनाज (NFSA / PMGKAY)" },
+    "ministry": "Department of Food & Public Distribution",
+    "categories": ["food"],
+    "benefit": { "en": "Free food grains: 5 kg per person every month (35 kg per family on an Antyodaya card).", "hi": "मुफ़्त अनाज: हर महीने प्रति व्यक्ति 5 किलो (अंत्योदय कार्ड पर प्रति परिवार 35 किलो)।" },
+    "description": { "en": "Apply for a priority (PHH) or Antyodaya ration card if your family does not have one.", "hi": "अगर परिवार के पास नहीं है तो प्राथमिकता (PHH) या अंत्योदय राशन कार्ड के लिए आवेदन करें।" },
+    "benefitValue": 8000,
+    "eligibility": { "all": [
+      { "field": "rationCard", "op": "eq", "value": "none" },
+      { "field": "income", "op": "lte", "value": 250000 },
+      { "field": "taxPayer", "op": "eq", "value": false }
+    ] },
+    "conditions": [
+      { "en": "Exact income limits are set by each state.", "hi": "आय की सही सीमा हर राज्य तय करता है।" }
+    ],
+    "documents": ["aadhaar", "residence_proof", "income_cert", "photo"],
+    "channels": ["online", "district_office", "csc"],
+    "applyUrl": "https://nfsa.gov.in/",
+    "sourceUrl": "https://nfsa.gov.in/",
+    "helpline": "1967",
+    "lastReviewed": "2026-11-17"
+  },
+  {
+    "id": "pmjdy",
+    "level": "central", "states": [],
+    "name": { "en": "PM Jan Dhan Yojana (Free Bank Account)", "hi": "प्रधानमंत्री जन धन योजना (मुफ़्त बैंक खाता)" },
+    "ministry": "Department of Financial Services",
+    "categories": ["banking"],
+    "benefit": { "en": "Zero-balance bank account with free RuPay card, ₹2 lakh accident insurance and overdraft up to ₹10,000.", "hi": "बिना न्यूनतम राशि वाला बैंक खाता, मुफ़्त RuPay कार्ड, ₹2 लाख दुर्घटना बीमा और ₹10,000 तक ओवरड्राफ़्ट।" },
+    "description": { "en": "A bank account is needed to receive most government money directly (DBT).", "hi": "ज़्यादातर सरकारी पैसा सीधे (DBT) पाने के लिए बैंक खाता ज़रूरी है।" },
+    "benefitValue": 3000,
+    "eligibility": { "all": [
+      { "field": "hasBankAccount", "op": "eq", "value": false },
+      { "field": "age", "op": "gte", "value": 10 }
+    ] },
+    "conditions": [],
+    "documents": ["aadhaar", "photo"],
+    "channels": ["bank", "post_office"],
+    "applyUrl": "https://pmjdy.gov.in/",
+    "sourceUrl": "https://pmjdy.gov.in/",
+    "lastReviewed": "2026-11-17"
+  },
+  {
+    "id": "apy",
+    "level": "central", "states": [],
+    "name": { "en": "Atal Pension Yojana", "hi": "अटल पेंशन योजना" },
+    "ministry": "Department of Financial Services / PFRDA",
+    "categories": ["pension"],
+    "benefit": { "en": "Guaranteed pension of ₹1,000 to ₹5,000 a month after age 60, depending on how much you save each month.", "hi": "60 साल के बाद हर महीने ₹1,000 से ₹5,000 तक गारंटी वाली पेंशन, आपकी मासिक बचत के हिसाब से।" },
+    "description": { "en": "Small monthly savings from your bank account for a pension in old age.", "hi": "बुढ़ापे की पेंशन के लिए बैंक खाते से हर महीने छोटी बचत।" },
+    "benefitValue": 12000,
+    "eligibility": { "all": [
+      { "field": "age", "op": "between", "value": [18, 40] },
+      { "field": "taxPayer", "op": "eq", "value": false }
+    ] },
+    "conditions": [
+      { "en": "You need a savings bank or post office account.", "hi": "बैंक या डाकघर में बचत खाता होना चाहिए।" }
+    ],
+    "documents": ["aadhaar", "bank_passbook", "mobile"],
+    "channels": ["bank", "post_office"],
+    "applyUrl": "https://www.myscheme.gov.in/schemes/apy",
+    "sourceUrl": "https://www.pfrda.org.in/",
+    "lastReviewed": "2026-11-17"
+  },
+  {
+    "id": "pmjjby",
+    "level": "central", "states": [],
+    "name": { "en": "PM Jeevan Jyoti Bima Yojana (Life Insurance)", "hi": "प्रधानमंत्री जीवन ज्योति बीमा योजना" },
+    "ministry": "Department of Financial Services",
+    "categories": ["insurance"],
+    "benefit": { "en": "₹2 lakh life insurance for just ₹436 a year, paid automatically from your bank account.", "hi": "सिर्फ़ ₹436 सालाना में ₹2 लाख का जीवन बीमा, बैंक खाते से अपने-आप कटता है।" },
+    "description": { "en": "Family gets ₹2 lakh if the insured person dies for any reason.", "hi": "बीमित व्यक्ति की किसी भी कारण से मृत्यु होने पर परिवार को ₹2 लाख मिलते हैं।" },
+    "benefitValue": 8000,
+    "eligibility": { "field": "age", "op": "between", "value": [18, 50] },
+    "conditions": [
+      { "en": "You need a savings bank or post office account.", "hi": "बैंक या डाकघर में बचत खाता होना चाहिए।" }
+    ],
+    "documents": ["aadhaar", "bank_passbook"],
+    "channels": ["bank", "post_office", "online"],
+    "applyUrl": "https://www.jansuraksha.gov.in/",
+    "sourceUrl": "https://www.jansuraksha.gov.in/",
+    "lastReviewed": "2026-11-17"
+  },
+  {
+    "id": "pmsby",
+    "level": "central", "states": [],
+    "name": { "en": "PM Suraksha Bima Yojana (Accident Insurance)", "hi": "प्रधानमंत्री सुरक्षा बीमा योजना (दुर्घटना बीमा)" },
+    "ministry": "Department of Financial Services",
+    "categories": ["insurance"],
+    "benefit": { "en": "₹2 lakh accident insurance (₹1 lakh for partial disability) for only ₹20 a year.", "hi": "सिर्फ़ ₹20 सालाना में ₹2 लाख का दुर्घटना बीमा (आंशिक विकलांगता पर ₹1 लाख)।" },
+    "description": { "en": "The cheapest insurance for any adult with a bank account.", "hi": "बैंक खाते वाले किसी भी वयस्क के लिए सबसे सस्ता बीमा।" },
+    "benefitValue": 6000,
+    "eligibility": { "field": "age", "op": "between", "value": [18, 70] },
+    "conditions": [
+      { "en": "You need a savings bank or post office account.", "hi": "बैंक या डाकघर में बचत खाता होना चाहिए।" }
+    ],
+    "documents": ["aadhaar", "bank_passbook"],
+    "channels": ["bank", "post_office", "online"],
+    "applyUrl": "https://www.jansuraksha.gov.in/",
+    "sourceUrl": "https://www.jansuraksha.gov.in/",
+    "lastReviewed": "2026-11-17"
+  },
+  {
+    "id": "pm-sym",
+    "level": "central", "states": [],
+    "name": { "en": "PM Shram Yogi Maan-Dhan (Worker Pension)", "hi": "पीएम श्रम योगी मान-धन (मज़दूर पेंशन)" },
+    "ministry": "Ministry of Labour & Employment",
+    "categories": ["pension", "jobs"],
+    "benefit": { "en": "₹3,000 per month pension after age 60. You pay ₹55–200 a month and the government pays the same.", "hi": "60 साल के बाद हर महीने ₹3,000 पेंशन। आप हर महीने ₹55–200 जमा करें, उतना ही सरकार देगी।" },
+    "description": { "en": "Pension for unorganised workers earning up to ₹15,000 a month.", "hi": "₹15,000 महीना तक कमाने वाले असंगठित मज़दूरों के लिए पेंशन।" },
+    "benefitValue": 12000,
+    "eligibility": { "all": [
+      { "field": "age", "op": "between", "value": [18, 40] },
+      { "field": "occupation", "op": "in", "value": ["agri_labourer", "daily_wage", "street_vendor", "artisan", "fisher", "livestock", "self_employed", "tenant_farmer", "homemaker"] },
+      { "field": "income", "op": "lte", "value": 250000 },
+      { "field": "taxPayer", "op": "eq", "value": false }
+    ] },
+    "conditions": [
+      { "en": "Your own income must be ₹15,000 a month or less, and you must not be in EPFO, ESIC or NPS.", "hi": "आपकी अपनी आय ₹15,000 महीना या कम हो, और आप EPFO, ESIC या NPS के सदस्य न हों।" }
+    ],
+    "documents": ["aadhaar", "bank_passbook", "mobile"],
+    "channels": ["csc", "online"],
+    "applyUrl": "https://maandhan.in/",
+    "sourceUrl": "https://maandhan.in/",
+    "helpline": "14434",
+    "lastReviewed": "2026-11-17"
+  },
+  {
+    "id": "e-shram",
+    "level": "central", "states": [],
+    "name": { "en": "e-Shram Card (Unorganised Workers)", "hi": "ई-श्रम कार्ड (असंगठित मज़दूर)" },
+    "ministry": "Ministry of Labour & Employment",
+    "categories": ["jobs", "insurance"],
+    "benefit": { "en": "Free registration and an e-Shram card with a 12-digit number. Helps you get welfare schemes, insurance and help during emergencies.", "hi": "मुफ़्त पंजीकरण और 12 अंकों वाला ई-श्रम कार्ड। कल्याण योजनाएँ, बीमा और आपदा में मदद पाने में आसानी।" },
+    "description": { "en": "National database of workers like labourers, vendors, domestic workers and artisans.", "hi": "मज़दूर, फेरीवाले, घरेलू कामगार और कारीगर जैसे कामगारों का राष्ट्रीय रिकॉर्ड।" },
+    "benefitValue": 3000,
+    "eligibility": { "all": [
+      { "field": "age", "op": "between", "value": [16, 59] },
+      { "field": "occupation", "op": "in", "value": ["agri_labourer", "daily_wage", "street_vendor", "artisan", "fisher", "livestock", "self_employed", "tenant_farmer", "homemaker", "unemployed"] },
+      { "field": "taxPayer", "op": "eq", "value": false }
+    ] },
+    "conditions": [
+      { "en": "You must not be a member of EPFO or ESIC.", "hi": "आप EPFO या ESIC के सदस्य नहीं होने चाहिए।" }
+    ],
+    "documents": ["aadhaar", "bank_passbook", "mobile"],
+    "channels": ["online", "csc"],
+    "applyUrl": "https://eshram.gov.in/",
+    "sourceUrl": "https://eshram.gov.in/",
+    "helpline": "14434",
+    "lastReviewed": "2026-11-17"
+  },
+  {
+    "id": "pm-svanidhi",
+    "level": "central", "states": [],
+    "name": { "en": "PM SVANidhi (Loan for Street Vendors)", "hi": "पीएम स्वनिधि (रेहड़ी-पटरी वालों के लिए लोन)" },
+    "ministry": "Ministry of Housing & Urban Affairs",
+    "categories": ["business"],
+    "benefit": { "en": "Loan without guarantee — first ₹15,000, then ₹25,000, then ₹50,000 — with 7% interest subsidy and cashback on digital payments.", "hi": "बिना गारंटी लोन — पहले ₹15,000, फिर ₹25,000, फिर ₹50,000 — 7% ब्याज सब्सिडी और डिजिटल भुगतान पर कैशबैक।" },
+    "description": { "en": "Working capital for street vendors to restart or grow their business.", "hi": "रेहड़ी-पटरी वालों को धंधा बढ़ाने के लिए पूँजी।" },
+    "benefitValue": 15000,
+    "eligibility": { "field": "occupation", "op": "in", "value": ["street_vendor"] },
+    "conditions": [
+      { "en": "You need a vending certificate, or a Letter of Recommendation from the town body.", "hi": "वेंडिंग प्रमाण पत्र या नगर निकाय का सिफ़ारिश पत्र चाहिए।" }
+    ],
+    "documents": ["aadhaar", "vending_certificate", "bank_passbook", "mobile"],
+    "channels": ["online", "csc", "bank"],
+    "applyUrl": "https://pmsvanidhi.mohua.gov.in/",
+    "sourceUrl": "https://pmsvanidhi.mohua.gov.in/",
+    "helpline": "1800-11-1979",
+    "lastReviewed": "2026-11-17"
+  },
+  {
+    "id": "pm-mudra",
+    "level": "central", "states": [],
+    "name": { "en": "PM Mudra Yojana (Business Loan)", "hi": "प्रधानमंत्री मुद्रा योजना (व्यापार लोन)" },
+    "ministry": "Department of Financial Services",
+    "categories": ["business"],
+    "benefit": { "en": "Business loan without collateral: Shishu up to ₹50,000, Kishore up to ₹5 lakh, Tarun up to ₹10 lakh, Tarun Plus up to ₹20 lakh.", "hi": "बिना गारंटी व्यापार लोन: शिशु ₹50,000 तक, किशोर ₹5 लाख तक, तरुण ₹10 लाख तक, तरुण प्लस ₹20 लाख तक।" },
+    "description": { "en": "For starting or growing a small shop, workshop, dairy, tailoring or other small business.", "hi": "छोटी दुकान, वर्कशॉप, डेयरी, सिलाई या दूसरा छोटा कारोबार शुरू करने या बढ़ाने के लिए।" },
+    "benefitValue": 50000,
+    "eligibility": { "all": [
+      { "field": "age", "op": "gte", "value": 18 },
+      { "field": "occupation", "op": "in", "value": ["self_employed", "artisan", "street_vendor", "livestock", "fisher", "unemployed", "homemaker"] }
+    ] },
+    "conditions": [],
+    "documents": ["aadhaar", "photo", "project_report", "bank_passbook"],
+    "channels": ["bank", "online"],
+    "applyUrl": "https://www.jansamarth.in/",
+    "sourceUrl": "https://www.mudra.org.in/",
+    "lastReviewed": "2026-11-17"
+  },
+  {
+    "id": "stand-up-india",
+    "level": "central", "states": [],
+    "name": { "en": "Stand-Up India (Loans for SC/ST & Women)", "hi": "स्टैंड-अप इंडिया (SC/ST और महिलाओं के लिए लोन)" },
+    "ministry": "Department of Financial Services / SIDBI",
+    "categories": ["business", "women_child"],
+    "benefit": { "en": "Bank loan from ₹10 lakh to ₹1 crore to start a new business.", "hi": "नया व्यवसाय शुरू करने के लिए ₹10 लाख से ₹1 करोड़ तक बैंक लोन।" },
+    "description": { "en": "For SC/ST and women entrepreneurs starting a first (greenfield) enterprise.", "hi": "SC/ST और महिला उद्यमियों के लिए जो पहला नया उद्यम शुरू कर रहे हैं।" },
+    "benefitValue": 100000,
+    "eligibility": { "all": [
+      { "field": "age", "op": "gte", "value": 18 },
+      { "field": "occupation", "op": "notIn", "value": ["govt_job", "student", "retired"] },
+      { "any": [
+        { "field": "category", "op": "in", "value": ["sc", "st"] },
+        { "field": "gender", "op": "eq", "value": "female" }
+      ] }
+    ] },
+    "conditions": [
+      { "en": "The business must be new (first venture) in manufacturing, services, trading or farm-related activity.", "hi": "व्यवसाय नया (पहला) होना चाहिए — निर्माण, सेवा, व्यापार या खेती से जुड़ा।" }
+    ],
+    "documents": ["aadhaar", "caste_cert", "project_report", "photo"],
+    "channels": ["online", "bank"],
+    "applyUrl": "https://www.standupmitra.in/",
+    "sourceUrl": "https://www.standupmitra.in/",
+    "lastReviewed": "2026-11-17"
+  },
+  {
+    "id": "pm-vishwakarma",
+    "level": "central", "states": [],
+    "name": { "en": "PM Vishwakarma (Artisans & Craftspeople)", "hi": "पीएम विश्वकर्मा (कारीगर और शिल्पकार)" },
+    "ministry": "Ministry of MSME",
+    "categories": ["business", "jobs"],
+    "benefit": { "en": "ID card and certificate, training with ₹500/day stipend, ₹15,000 for tools, and loans up to ₹3 lakh at 5% interest.", "hi": "पहचान पत्र और प्रमाण पत्र, ₹500 प्रतिदिन भत्ते के साथ ट्रेनिंग, औज़ारों के लिए ₹15,000, और 5% ब्याज पर ₹3 लाख तक लोन।" },
+    "description": { "en": "For 18 traditional trades: carpenter, blacksmith, potter, tailor, cobbler, barber, washerman, mason, goldsmith, basket maker, toy maker and more.", "hi": "18 पारंपरिक कामों के लिए: बढ़ई, लोहार, कुम्हार, दर्ज़ी, मोची, नाई, धोबी, राजमिस्त्री, सुनार, टोकरी बनाने वाले, खिलौना बनाने वाले आदि।" },
+    "benefitValue": 40000,
+    "eligibility": { "all": [
+      { "field": "occupation", "op": "in", "value": ["artisan"] },
+      { "field": "age", "op": "gte", "value": 18 }
+    ] },
+    "conditions": [
+      { "en": "Only one member per family. Families with a government employee are not eligible.", "hi": "परिवार से सिर्फ़ एक सदस्य। सरकारी कर्मचारी वाले परिवार पात्र नहीं।" }
+    ],
+    "documents": ["aadhaar", "bank_passbook", "ration_card", "mobile"],
+    "channels": ["csc"],
+    "applyUrl": "https://pmvishwakarma.gov.in/",
+    "sourceUrl": "https://pmvishwakarma.gov.in/",
+    "helpline": "18002677777",
+    "lastReviewed": "2026-11-17"
+  },
+  {
+    "id": "pmegp",
+    "level": "central", "states": [],
+    "name": { "en": "PMEGP (Subsidy to Start a Business)", "hi": "पीएमईजीपी (नया उद्योग शुरू करने पर सब्सिडी)" },
+    "ministry": "Ministry of MSME / KVIC",
+    "categories": ["business", "jobs"],
+    "benefit": { "en": "15% to 35% of your project cost is given as subsidy (higher for village, SC/ST, OBC, women and disabled applicants). Projects up to ₹50 lakh.", "hi": "प्रोजेक्ट लागत का 15% से 35% सब्सिडी (गाँव, SC/ST, OBC, महिला और दिव्यांग के लिए ज़्यादा)। ₹50 लाख तक के प्रोजेक्ट।" },
+    "description": { "en": "Bank loan + government subsidy to set up a new small factory or service unit.", "hi": "नई छोटी इकाई या सेवा केंद्र लगाने के लिए बैंक लोन + सरकारी सब्सिडी।" },
+    "benefitValue": 80000,
+    "eligibility": { "all": [
+      { "field": "age", "op": "gte", "value": 18 },
+      { "field": "occupation", "op": "notIn", "value": ["govt_job", "retired"] }
+    ] },
+    "conditions": [
+      { "en": "For projects above ₹10 lakh (manufacturing) or ₹5 lakh (services), you must have passed Class 8.", "hi": "₹10 लाख (निर्माण) या ₹5 लाख (सेवा) से बड़े प्रोजेक्ट के लिए 8वीं पास होना ज़रूरी।" }
+    ],
+    "documents": ["aadhaar", "project_report", "caste_cert", "photo"],
+    "channels": ["online"],
+    "applyUrl": "https://www.kviconline.gov.in/pmegpeportal/pmegphome/index.jsp",
+    "sourceUrl": "https://www.kviconline.gov.in/",
+    "lastReviewed": "2026-11-17"
+  },
+  {
+    "id": "pmkvy",
+    "level": "central", "states": [],
+    "name": { "en": "PM Kaushal Vikas Yojana (Free Skill Training)", "hi": "प्रधानमंत्री कौशल विकास योजना (मुफ़्त हुनर ट्रेनिंग)" },
+    "ministry": "Ministry of Skill Development & Entrepreneurship",
+    "categories": ["jobs", "education"],
+    "benefit": { "en": "Free short training courses with a government certificate in hundreds of jobs — electrician, tailoring, mobile repair, beauty, computer and more.", "hi": "सरकारी प्रमाण पत्र के साथ मुफ़्त छोटे कोर्स — इलेक्ट्रीशियन, सिलाई, मोबाइल रिपेयर, ब्यूटी, कंप्यूटर आदि।" },
+    "description": { "en": "Learn a skill to get a better job or start your own work.", "hi": "बेहतर नौकरी या अपना काम शुरू करने के लिए हुनर सीखें।" },
+    "benefitValue": 15000,
+    "eligibility": { "all": [
+      { "field": "age", "op": "between", "value": [15, 45] },
+      { "field": "occupation", "op": "notIn", "value": ["govt_job", "retired"] }
+    ] },
+    "conditions": [],
+    "documents": ["aadhaar", "bank_passbook", "marksheet"],
+    "channels": ["online"],
+    "applyUrl": "https://www.skillindiadigital.gov.in/",
+    "sourceUrl": "https://www.msde.gov.in/",
+    "helpline": "8800055555",
+    "lastReviewed": "2026-11-17"
+  },
+  {
+    "id": "ddu-gky",
+    "level": "central", "states": [],
+    "name": { "en": "DDU-GKY (Training + Job for Rural Youth)", "hi": "दीन दयाल उपाध्याय ग्रामीण कौशल्य योजना" },
+    "ministry": "Ministry of Rural Development",
+    "categories": ["jobs"],
+    "benefit": { "en": "Free residential skill training with food and stay, and a guaranteed job placement for poor rural youth.", "hi": "ग़रीब ग्रामीण युवाओं को रहने-खाने के साथ मुफ़्त ट्रेनिंग और नौकरी दिलाने की गारंटी।" },
+    "description": { "en": "For rural youth aged 15–35 from poor families (up to 45 for women, SC/ST and disabled).", "hi": "15–35 साल के ग़रीब ग्रामीण युवाओं के लिए (महिला, SC/ST और दिव्यांग के लिए 45 साल तक)।" },
+    "benefitValue": 30000,
+    "eligibility": { "all": [
+      { "field": "area", "op": "eq", "value": "rural" },
+      { "field": "age", "op": "between", "value": [15, 45] },
+      { "field": "occupation", "op": "notIn", "value": ["govt_job", "private_job", "retired"] },
+      { "any": [
+        { "field": "rationCard", "op": "in", "value": ["aay", "phh"] },
+        { "field": "income", "op": "lte", "value": 100000 }
+      ] }
+    ] },
+    "conditions": [
+      { "en": "Age limit is 35 for most people; up to 45 for women, SC/ST and persons with disability.", "hi": "ज़्यादातर लोगों के लिए अधिकतम उम्र 35; महिला, SC/ST और दिव्यांग के लिए 45।" }
+    ],
+    "documents": ["aadhaar", "ration_card", "job_card", "photo"],
+    "channels": ["gram_panchayat", "district_office", "online"],
+    "applyUrl": "https://kaushalpanjee.nic.in/",
+    "sourceUrl": "https://rural.gov.in/",
+    "lastReviewed": "2026-11-17"
+  },
+  {
+    "id": "pm-internship",
+    "level": "central", "states": [],
+    "name": { "en": "PM Internship Scheme", "hi": "पीएम इंटर्नशिप योजना" },
+    "ministry": "Ministry of Corporate Affairs",
+    "categories": ["jobs"],
+    "benefit": { "en": "12-month internship in a top company with ₹5,000 every month and a one-time grant of ₹6,000.", "hi": "बड़ी कंपनी में 12 महीने की इंटर्नशिप, हर महीने ₹5,000 और एक बार ₹6,000 की सहायता।" },
+    "description": { "en": "For young people aged 21–24 who are not in a full-time job or full-time study.", "hi": "21–24 साल के युवाओं के लिए जो पूरे समय की नौकरी या पढ़ाई नहीं कर रहे।" },
+    "benefitValue": 66000,
+    "eligibility": { "all": [
+      { "field": "age", "op": "between", "value": [21, 24] },
+      { "field": "occupation", "op": "notIn", "value": ["govt_job", "private_job", "student"] },
+      { "field": "income", "op": "lte", "value": 800000 },
+      { "field": "taxPayer", "op": "eq", "value": false }
+    ] },
+    "conditions": [
+      { "en": "You must have passed at least Class 10 (or ITI / diploma / graduation).", "hi": "कम से कम 10वीं पास (या ITI / डिप्लोमा / ग्रेजुएशन) होना ज़रूरी।" }
+    ],
+    "documents": ["aadhaar", "marksheet", "photo"],
+    "channels": ["online"],
+    "applyUrl": "https://pminternship.mca.gov.in/",
+    "sourceUrl": "https://pminternship.mca.gov.in/",
+    "helpline": "1800116090",
+    "lastReviewed": "2026-11-17"
+  },
+  {
+    "id": "pmmvy",
+    "level": "central", "states": [],
+    "name": { "en": "PM Matru Vandana Yojana (Pregnancy Benefit)", "hi": "प्रधानमंत्री मातृ वंदना योजना" },
+    "ministry": "Ministry of Women & Child Development",
+    "categories": ["women_child", "health"],
+    "benefit": { "en": "₹5,000 for the first child, and ₹6,000 for the second child if it is a girl — paid into the mother's bank account.", "hi": "पहले बच्चे पर ₹5,000, और दूसरा बच्चा बेटी हो तो ₹6,000 — माँ के बैंक खाते में।" },
+    "description": { "en": "Cash help for pregnant women and new mothers for better food and rest.", "hi": "गर्भवती और नई माँ को अच्छे खान-पान और आराम के लिए नकद मदद।" },
+    "benefitValue": 5000,
+    "eligibility": { "all": [
+      { "field": "gender", "op": "eq", "value": "female" },
+      { "field": "pregnant", "op": "eq", "value": true },
+      { "field": "age", "op": "gte", "value": 19 }
+    ] },
+    "conditions": [
+      { "en": "Register at the Anganwadi or health centre during pregnancy.", "hi": "गर्भावस्था में आंगनवाड़ी या स्वास्थ्य केंद्र पर पंजीकरण कराएँ।" }
+    ],
+    "documents": ["aadhaar", "mcp_card", "bank_passbook"],
+    "channels": ["anganwadi", "health_centre", "online"],
+    "applyUrl": "https://pmmvy.wcd.gov.in/",
+    "sourceUrl": "https://wcd.gov.in/",
+    "helpline": "14408",
+    "lastReviewed": "2026-11-17"
+  },
+  {
+    "id": "jsy",
+    "level": "central", "states": [],
+    "name": { "en": "Janani Suraksha Yojana (Safe Delivery)", "hi": "जननी सुरक्षा योजना" },
+    "ministry": "Ministry of Health & Family Welfare (NHM)",
+    "categories": ["women_child", "health"],
+    "benefit": { "en": "Cash help for delivering the baby in a government hospital — ₹1,400 in villages / ₹1,000 in towns in most northern and eastern states, ₹700 / ₹600 in others. Delivery and care are free.", "hi": "सरकारी अस्पताल में प्रसव पर नकद मदद — ज़्यादातर उत्तरी और पूर्वी राज्यों में गाँव में ₹1,400 / शहर में ₹1,000, बाक़ी राज्यों में ₹700 / ₹600। प्रसव और इलाज मुफ़्त।" },
+    "description": { "en": "Your ASHA didi will help you register and reach the hospital.", "hi": "आशा दीदी पंजीकरण और अस्पताल पहुँचने में मदद करेंगी।" },
+    "benefitValue": 1400,
+    "eligibility": { "all": [
+      { "field": "gender", "op": "eq", "value": "female" },
+      { "field": "pregnant", "op": "eq", "value": true },
+      { "any": [
+        { "field": "rationCard", "op": "in", "value": ["aay", "phh"] },
+        { "field": "category", "op": "in", "value": ["sc", "st"] },
+        { "field": "income", "op": "lte", "value": 100000 }
+      ] }
+    ] },
+    "conditions": [
+      { "en": "In some states all pregnant women qualify; in others only BPL / SC / ST women.", "hi": "कुछ राज्यों में सभी गर्भवती महिलाएँ पात्र हैं; बाक़ी में सिर्फ़ BPL / SC / ST महिलाएँ।" }
+    ],
+    "documents": ["aadhaar", "mcp_card", "bank_passbook", "ration_card"],
+    "channels": ["health_centre", "anganwadi"],
+    "applyUrl": "https://nhm.gov.in/",
+    "sourceUrl": "https://nhm.gov.in/",
+    "helpline": "104",
+    "lastReviewed": "2026-11-17"
+  },
+  {
+    "id": "ssy",
+    "level": "central", "states": [],
+    "name": { "en": "Sukanya Samriddhi Yojana (Savings for Daughter)", "hi": "सुकन्या समृद्धि योजना (बेटी के लिए बचत)" },
+    "ministry": "Department of Economic Affairs / India Post",
+    "categories": ["women_child", "banking"],
+    "benefit": { "en": "Savings account for your daughter with high, tax-free interest (about 8.2% a year). Save from ₹250 a year.", "hi": "बेटी के लिए बचत खाता, ऊँचा और टैक्स-फ़्री ब्याज (लगभग 8.2% सालाना)। ₹250 सालाना से शुरू।" },
+    "description": { "en": "Money for your daughter's education and marriage. Open before she turns 10.", "hi": "बेटी की पढ़ाई और शादी के लिए पैसा। 10 साल की उम्र से पहले खाता खोलें।" },
+    "benefitValue": 5000,
+    "eligibility": { "field": "girlChildUnder10", "op": "eq", "value": true },
+    "conditions": [],
+    "documents": ["birth_cert", "aadhaar", "photo"],
+    "channels": ["post_office", "bank"],
+    "applyUrl": "https://www.indiapost.gov.in/",
+    "sourceUrl": "https://www.nsiindia.gov.in/",
+    "lastReviewed": "2026-11-17"
+  },
+  {
+    "id": "ignoaps",
+    "level": "central", "states": [],
+    "name": { "en": "Old Age Pension (IGNOAPS)", "hi": "वृद्धावस्था पेंशन (इंदिरा गांधी राष्ट्रीय वृद्धावस्था पेंशन)" },
+    "ministry": "Ministry of Rural Development (NSAP)",
+    "categories": ["pension"],
+    "benefit": { "en": "Monthly pension for poor elderly: ₹200 (age 60–79) or ₹500 (age 80+) from the centre — most states add more, often ₹1,000 or above.", "hi": "ग़रीब बुज़ुर्गों को हर महीने पेंशन: केंद्र से ₹200 (60–79 साल) या ₹500 (80+ साल) — ज़्यादातर राज्य इसमें जोड़ते हैं, अक्सर ₹1,000 या ज़्यादा।" },
+    "description": { "en": "For people aged 60 and above from BPL families.", "hi": "BPL परिवारों के 60 साल और उससे ज़्यादा उम्र के लोगों के लिए।" },
+    "benefitValue": 12000,
+    "eligibility": { "all": [
+      { "field": "age", "op": "gte", "value": 60 },
+      { "any": [
+        { "field": "rationCard", "op": "in", "value": ["aay", "phh"] },
+        { "field": "income", "op": "lte", "value": 100000 }
+      ] }
+    ] },
+    "conditions": [],
+    "documents": ["aadhaar", "age_proof", "ration_card", "bank_passbook"],
+    "channels": ["gram_panchayat", "district_office", "online"],
+    "applyUrl": "https://nsap.nic.in/",
+    "sourceUrl": "https://nsap.nic.in/",
+    "lastReviewed": "2026-11-17"
+  },
+  {
+    "id": "ignwps",
+    "level": "central", "states": [],
+    "name": { "en": "Widow Pension (IGNWPS)", "hi": "विधवा पेंशन (इंदिरा गांधी राष्ट्रीय विधवा पेंशन)" },
+    "ministry": "Ministry of Rural Development (NSAP)",
+    "categories": ["pension", "women_child"],
+    "benefit": { "en": "Monthly pension of ₹300 from the centre for poor widows aged 40–79 — states usually add more.", "hi": "40–79 साल की ग़रीब विधवा महिलाओं को केंद्र से हर महीने ₹300 पेंशन — राज्य आम तौर पर और जोड़ते हैं।" },
+    "description": { "en": "Regular income support for widows from BPL families.", "hi": "BPL परिवारों की विधवा महिलाओं को नियमित आर्थिक मदद।" },
+    "benefitValue": 10000,
+    "eligibility": { "all": [
+      { "field": "maritalStatus", "op": "eq", "value": "widowed" },
+      { "field": "gender", "op": "eq", "value": "female" },
+      { "field": "age", "op": "between", "value": [40, 79] },
+      { "any": [
+        { "field": "rationCard", "op": "in", "value": ["aay", "phh"] },
+        { "field": "income", "op": "lte", "value": 100000 }
+      ] }
+    ] },
+    "conditions": [
+      { "en": "Many states run their own widow pension for all ages — ask at the block office.", "hi": "कई राज्य हर उम्र के लिए अपनी विधवा पेंशन चलाते हैं — ब्लॉक कार्यालय में पूछें।" }
+    ],
+    "documents": ["aadhaar", "death_cert", "ration_card", "bank_passbook"],
+    "channels": ["gram_panchayat", "district_office", "online"],
+    "applyUrl": "https://nsap.nic.in/",
+    "sourceUrl": "https://nsap.nic.in/",
+    "lastReviewed": "2026-11-17"
+  },
+  {
+    "id": "igndps",
+    "level": "central", "states": [],
+    "name": { "en": "Disability Pension (IGNDPS)", "hi": "दिव्यांग पेंशन (इंदिरा गांधी राष्ट्रीय दिव्यांग पेंशन)" },
+    "ministry": "Ministry of Rural Development (NSAP)",
+    "categories": ["pension", "disability"],
+    "benefit": { "en": "Monthly pension of ₹300 from the centre for poor persons with severe disability — states usually add more.", "hi": "गंभीर दिव्यांगता वाले ग़रीब लोगों को केंद्र से हर महीने ₹300 पेंशन — राज्य आम तौर पर और जोड़ते हैं।" },
+    "description": { "en": "For people aged 18–79 from BPL families with 80% or more disability.", "hi": "BPL परिवारों के 18–79 साल के लोग जिनकी दिव्यांगता 80% या ज़्यादा है।" },
+    "benefitValue": 10000,
+    "eligibility": { "all": [
+      { "field": "disability", "op": "gte", "value": 80 },
+      { "field": "age", "op": "between", "value": [18, 79] },
+      { "any": [
+        { "field": "rationCard", "op": "in", "value": ["aay", "phh"] },
+        { "field": "income", "op": "lte", "value": 100000 }
+      ] }
+    ] },
+    "conditions": [
+      { "en": "Most states also give a disability pension at 40% disability — ask at the block / social welfare office.", "hi": "ज़्यादातर राज्य 40% दिव्यांगता पर भी पेंशन देते हैं — ब्लॉक / समाज कल्याण कार्यालय में पूछें।" }
+    ],
+    "documents": ["aadhaar", "disability_cert", "ration_card", "bank_passbook"],
+    "channels": ["gram_panchayat", "district_office", "online"],
+    "applyUrl": "https://nsap.nic.in/",
+    "sourceUrl": "https://nsap.nic.in/",
+    "lastReviewed": "2026-11-17"
+  },
+  {
+    "id": "nfbs",
+    "level": "central", "states": [],
+    "name": { "en": "National Family Benefit Scheme", "hi": "राष्ट्रीय परिवार सहायता योजना" },
+    "ministry": "Ministry of Rural Development (NSAP)",
+    "categories": ["pension", "women_child"],
+    "benefit": { "en": "One-time ₹20,000 to a poor family when the main earning member (aged 18–59) dies.", "hi": "ग़रीब परिवार के मुख्य कमाने वाले सदस्य (18–59 साल) की मृत्यु पर परिवार को एक बार ₹20,000।" },
+    "description": { "en": "Immediate help for a family that has lost its breadwinner.", "hi": "कमाने वाले सदस्य को खोने वाले परिवार को तुरंत मदद।" },
+    "benefitValue": 20000,
+    "eligibility": { "all": [
+      { "field": "maritalStatus", "op": "eq", "value": "widowed" },
+      { "any": [
+        { "field": "rationCard", "op": "in", "value": ["aay", "phh"] },
+        { "field": "income", "op": "lte", "value": 100000 }
+      ] }
+    ] },
+    "conditions": [
+      { "en": "The person who died must have been the main earner, aged 18–59. Apply soon after the death.", "hi": "जिनकी मृत्यु हुई वे परिवार के मुख्य कमाने वाले हों, उम्र 18–59 साल। मृत्यु के कुछ समय में ही आवेदन करें।" }
+    ],
+    "documents": ["death_cert", "aadhaar", "ration_card", "bank_passbook"],
+    "channels": ["district_office", "gram_panchayat", "online"],
+    "applyUrl": "https://nsap.nic.in/",
+    "sourceUrl": "https://nsap.nic.in/",
+    "lastReviewed": "2026-11-17"
+  },
+  {
+    "id": "udid",
+    "level": "central", "states": [],
+    "name": { "en": "UDID Card (Unique Disability ID)", "hi": "UDID कार्ड (दिव्यांग पहचान पत्र)" },
+    "ministry": "Department of Empowerment of Persons with Disabilities",
+    "categories": ["disability"],
+    "benefit": { "en": "Free disability certificate and ID card valid across India — needed for almost every disability benefit.", "hi": "पूरे भारत में मान्य मुफ़्त दिव्यांगता प्रमाण पत्र और पहचान पत्र — लगभग हर दिव्यांग लाभ के लिए ज़रूरी।" },
+    "description": { "en": "Apply online; you will be called to a government hospital for assessment.", "hi": "ऑनलाइन आवेदन करें; जाँच के लिए सरकारी अस्पताल बुलाया जाएगा।" },
+    "benefitValue": 2000,
+    "eligibility": { "field": "disability", "op": "gte", "value": 1 },
+    "conditions": [],
+    "documents": ["aadhaar", "photo", "residence_proof"],
+    "channels": ["online", "health_centre", "csc"],
+    "applyUrl": "https://www.swavlambancard.gov.in/",
+    "sourceUrl": "https://depwd.gov.in/",
+    "lastReviewed": "2026-11-17"
+  },
+  {
+    "id": "adip",
+    "level": "central", "states": [],
+    "name": { "en": "ADIP Scheme (Free Aids & Appliances)", "hi": "ADIP योजना (मुफ़्त सहायक उपकरण)" },
+    "ministry": "Department of Empowerment of Persons with Disabilities",
+    "categories": ["disability", "health"],
+    "benefit": { "en": "Free or low-cost wheelchair, tricycle, hearing aid, artificial limb, smart cane and other aids (free if income is up to ₹22,500 a month).", "hi": "मुफ़्त या कम दाम पर व्हीलचेयर, ट्राइसाइकिल, कान की मशीन, कृत्रिम अंग, स्मार्ट छड़ी आदि (₹22,500 महीना तक आय पर मुफ़्त)।" },
+    "description": { "en": "Given through ALIMCO and assessment camps in districts.", "hi": "ALIMCO और ज़िलों में लगने वाले शिविरों के ज़रिए दिया जाता है।" },
+    "benefitValue": 15000,
+    "eligibility": { "all": [
+      { "field": "disability", "op": "gte", "value": 40 },
+      { "field": "income", "op": "lte", "value": 500000 }
+    ] },
+    "conditions": [
+      { "en": "Full aid is free up to ₹22,500/month income; 50% help up to ₹30,000/month.", "hi": "₹22,500 महीना तक आय पर पूरा उपकरण मुफ़्त; ₹30,000 महीना तक 50% मदद।" }
+    ],
+    "documents": ["disability_cert", "income_cert", "aadhaar", "photo"],
+    "channels": ["district_office", "health_centre"],
+    "applyUrl": "https://www.myscheme.gov.in/schemes/adip",
+    "sourceUrl": "https://depwd.gov.in/",
+    "lastReviewed": "2026-11-17"
+  },
+  {
+    "id": "post-matric-sc",
+    "level": "central", "states": [],
+    "name": { "en": "Post-Matric Scholarship for SC Students", "hi": "अनुसूचित जाति के छात्रों के लिए पोस्ट-मैट्रिक छात्रवृत्ति" },
+    "ministry": "Ministry of Social Justice & Empowerment",
+    "categories": ["education"],
+    "benefit": { "en": "Full fees paid plus a yearly allowance for studies from Class 11 up to college / PhD.", "hi": "कक्षा 11 से कॉलेज / पीएचडी तक की पढ़ाई की पूरी फीस और सालाना भत्ता।" },
+    "description": { "en": "For SC students whose family income is up to ₹2.5 lakh a year.", "hi": "SC छात्रों के लिए जिनके परिवार की सालाना आय ₹2.5 लाख तक है।" },
+    "benefitValue": 25000,
+    "eligibility": { "all": [
+      { "field": "category", "op": "eq", "value": "sc" },
+      { "field": "education", "op": "in", "value": ["class11to12", "college"] },
+      { "field": "income", "op": "lte", "value": 250000 }
+    ] },
+    "conditions": [],
+    "documents": ["aadhaar", "caste_cert", "income_cert", "marksheet", "fee_receipt", "bank_passbook"],
+    "channels": ["online", "school_college"],
+    "applyUrl": "https://scholarships.gov.in/",
+    "sourceUrl": "https://socialjustice.gov.in/",
+    "helpline": "0120-6619540",
+    "lastReviewed": "2026-11-17"
+  },
+  {
+    "id": "pre-matric-sc",
+    "level": "central", "states": [],
+    "name": { "en": "Pre-Matric Scholarship for SC Students (Class 9–10)", "hi": "अनुसूचित जाति के छात्रों के लिए प्री-मैट्रिक छात्रवृत्ति (कक्षा 9–10)" },
+    "ministry": "Ministry of Social Justice & Empowerment",
+    "categories": ["education"],
+    "benefit": { "en": "₹3,500 a year for day scholars, ₹7,000 a year for hostel students, plus other grants.", "hi": "रोज़ आने वाले छात्रों को ₹3,500 सालाना, हॉस्टल वालों को ₹7,000 सालाना, और अन्य मदद।" },
+    "description": { "en": "For SC students in Class 9 and 10 whose family income is up to ₹2.5 lakh.", "hi": "कक्षा 9 और 10 के SC छात्र जिनके परिवार की आय ₹2.5 लाख तक है।" },
+    "benefitValue": 3500,
+    "eligibility": { "all": [
+      { "field": "category", "op": "eq", "value": "sc" },
+      { "field": "education", "op": "eq", "value": "class9to10" },
+      { "field": "income", "op": "lte", "value": 250000 }
+    ] },
+    "conditions": [],
+    "documents": ["aadhaar", "caste_cert", "income_cert", "school_cert", "bank_passbook"],
+    "channels": ["online", "school_college"],
+    "applyUrl": "https://scholarships.gov.in/",
+    "sourceUrl": "https://socialjustice.gov.in/",
+    "lastReviewed": "2026-11-17"
+  },
+  {
+    "id": "post-matric-st",
+    "level": "central", "states": [],
+    "name": { "en": "Post-Matric Scholarship for ST Students", "hi": "अनुसूचित जनजाति के छात्रों के लिए पोस्ट-मैट्रिक छात्रवृत्ति" },
+    "ministry": "Ministry of Tribal Affairs",
+    "categories": ["education"],
+    "benefit": { "en": "Fees and a yearly allowance for studies after Class 10.", "hi": "कक्षा 10 के बाद की पढ़ाई के लिए फीस और सालाना भत्ता।" },
+    "description": { "en": "For ST students whose family income is up to ₹2.5 lakh a year.", "hi": "ST छात्रों के लिए जिनके परिवार की सालाना आय ₹2.5 लाख तक है।" },
+    "benefitValue": 25000,
+    "eligibility": { "all": [
+      { "field": "category", "op": "eq", "value": "st" },
+      { "field": "education", "op": "in", "value": ["class11to12", "college"] },
+      { "field": "income", "op": "lte", "value": 250000 }
+    ] },
+    "conditions": [],
+    "documents": ["aadhaar", "caste_cert", "income_cert", "marksheet", "fee_receipt", "bank_passbook"],
+    "channels": ["online", "school_college"],
+    "applyUrl": "https://scholarships.gov.in/",
+    "sourceUrl": "https://tribal.nic.in/",
+    "lastReviewed": "2026-11-17"
+  },
+  {
+    "id": "pm-yasasvi",
+    "level": "central", "states": [],
+    "name": { "en": "PM YASASVI Scholarship (OBC / EBC / DNT)", "hi": "पीएम यशस्वी छात्रवृत्ति (OBC / EBC / DNT)" },
+    "ministry": "Ministry of Social Justice & Empowerment",
+    "categories": ["education"],
+    "benefit": { "en": "Scholarship for Class 9–10 (pre-matric) and Class 11 to college (post-matric) students.", "hi": "कक्षा 9–10 (प्री-मैट्रिक) और कक्षा 11 से कॉलेज (पोस्ट-मैट्रिक) के छात्रों के लिए छात्रवृत्ति।" },
+    "description": { "en": "For OBC, EBC and DNT students with family income up to ₹2.5 lakh.", "hi": "OBC, EBC और DNT छात्रों के लिए जिनके परिवार की आय ₹2.5 लाख तक है।" },
+    "benefitValue": 10000,
+    "eligibility": { "all": [
+      { "field": "category", "op": "in", "value": ["obc"] },
+      { "field": "education", "op": "in", "value": ["class9to10", "class11to12", "college"] },
+      { "field": "income", "op": "lte", "value": 250000 }
+    ] },
+    "conditions": [],
+    "documents": ["aadhaar", "caste_cert", "income_cert", "marksheet", "bank_passbook"],
+    "channels": ["online", "school_college"],
+    "applyUrl": "https://scholarships.gov.in/",
+    "sourceUrl": "https://socialjustice.gov.in/",
+    "lastReviewed": "2026-11-17"
+  },
+  {
+    "id": "minority-post-matric",
+    "level": "central", "states": [],
+    "name": { "en": "Post-Matric Scholarship for Minorities", "hi": "अल्पसंख्यकों के लिए पोस्ट-मैट्रिक छात्रवृत्ति" },
+    "ministry": "Ministry of Minority Affairs",
+    "categories": ["education"],
+    "benefit": { "en": "Admission/tuition fees and a monthly maintenance allowance for Class 11 to PhD.", "hi": "कक्षा 11 से पीएचडी तक दाखिला/ट्यूशन फीस और मासिक भत्ता।" },
+    "description": { "en": "For students from minority communities with family income up to ₹2 lakh and at least 50% marks.", "hi": "अल्पसंख्यक समुदाय के छात्र जिनके परिवार की आय ₹2 लाख तक है और कम से कम 50% अंक हैं।" },
+    "benefitValue": 10000,
+    "eligibility": { "all": [
+      { "field": "minority", "op": "eq", "value": true },
+      { "field": "education", "op": "in", "value": ["class11to12", "college"] },
+      { "field": "income", "op": "lte", "value": 200000 }
+    ] },
+    "conditions": [
+      { "en": "At least 50% marks in the last exam.", "hi": "पिछली परीक्षा में कम से कम 50% अंक।" }
+    ],
+    "documents": ["aadhaar", "income_cert", "marksheet", "fee_receipt", "bank_passbook"],
+    "channels": ["online", "school_college"],
+    "applyUrl": "https://scholarships.gov.in/",
+    "sourceUrl": "https://www.minorityaffairs.gov.in/",
+    "lastReviewed": "2026-11-17"
+  },
+  {
+    "id": "disability-scholarship",
+    "level": "central", "states": [],
+    "name": { "en": "Scholarship for Students with Disabilities", "hi": "दिव्यांग छात्रों के लिए छात्रवृत्ति" },
+    "ministry": "Department of Empowerment of Persons with Disabilities",
+    "categories": ["education", "disability"],
+    "benefit": { "en": "Yearly scholarship and allowances (books, reader, transport) for Class 9 to post-graduation.", "hi": "कक्षा 9 से पोस्ट-ग्रेजुएशन तक सालाना छात्रवृत्ति और भत्ते (किताबें, रीडर, आने-जाने)।" },
+    "description": { "en": "For students with 40% or more disability and family income up to ₹2.5 lakh.", "hi": "40% या ज़्यादा दिव्यांगता वाले छात्र जिनके परिवार की आय ₹2.5 लाख तक है।" },
+    "benefitValue": 15000,
+    "eligibility": { "all": [
+      { "field": "disability", "op": "gte", "value": 40 },
+      { "field": "education", "op": "in", "value": ["class9to10", "class11to12", "college"] },
+      { "field": "income", "op": "lte", "value": 250000 }
+    ] },
+    "conditions": [],
+    "documents": ["disability_cert", "income_cert", "marksheet", "aadhaar", "bank_passbook"],
+    "channels": ["online", "school_college"],
+    "applyUrl": "https://scholarships.gov.in/",
+    "sourceUrl": "https://depwd.gov.in/",
+    "lastReviewed": "2026-11-17"
+  },
+  {
+    "id": "central-sector-scholarship",
+    "level": "central", "states": [],
+    "name": { "en": "Central Sector Scholarship for College Students", "hi": "कॉलेज छात्रों के लिए केंद्रीय क्षेत्र छात्रवृत्ति" },
+    "ministry": "Ministry of Education",
+    "categories": ["education"],
+    "benefit": { "en": "₹12,000 a year for graduation and ₹20,000 a year for post-graduation.", "hi": "ग्रेजुएशन के लिए ₹12,000 सालाना और पोस्ट-ग्रेजुएशन के लिए ₹20,000 सालाना।" },
+    "description": { "en": "For good students (top 20% in Class 12 board) with family income up to ₹4.5 lakh.", "hi": "अच्छे छात्रों (12वीं बोर्ड में टॉप 20%) के लिए जिनके परिवार की आय ₹4.5 लाख तक है।" },
+    "benefitValue": 12000,
+    "eligibility": { "all": [
+      { "field": "education", "op": "eq", "value": "college" },
+      { "field": "income", "op": "lte", "value": 450000 }
+    ] },
+    "conditions": [
+      { "en": "You must be above the 80th percentile in your Class 12 board and in a regular course.", "hi": "12वीं बोर्ड में 80 परसेंटाइल से ऊपर होना और नियमित कोर्स में पढ़ना ज़रूरी।" }
+    ],
+    "documents": ["marksheet", "income_cert", "aadhaar", "bank_passbook", "fee_receipt"],
+    "channels": ["online"],
+    "applyUrl": "https://scholarships.gov.in/",
+    "sourceUrl": "https://www.education.gov.in/",
+    "lastReviewed": "2026-11-17"
+  },
+  {
+    "id": "nmmss",
+    "level": "central", "states": [],
+    "name": { "en": "National Means-cum-Merit Scholarship (NMMS)", "hi": "राष्ट्रीय साधन-सह-योग्यता छात्रवृत्ति (NMMS)" },
+    "ministry": "Ministry of Education",
+    "categories": ["education"],
+    "benefit": { "en": "₹12,000 a year from Class 9 to Class 12 for students who clear the NMMS exam in Class 8.", "hi": "कक्षा 8 में NMMS परीक्षा पास करने वाले छात्रों को कक्षा 9 से 12 तक ₹12,000 सालाना।" },
+    "description": { "en": "For students of government and aided schools with family income up to ₹3.5 lakh.", "hi": "सरकारी और सहायता प्राप्त स्कूलों के छात्र जिनके परिवार की आय ₹3.5 लाख तक है।" },
+    "benefitValue": 12000,
+    "eligibility": { "all": [
+      { "field": "education", "op": "in", "value": ["class1to8", "class9to10", "class11to12"] },
+      { "field": "income", "op": "lte", "value": 350000 }
+    ] },
+    "conditions": [
+      { "en": "You must study in a government / aided school and pass the NMMS exam in Class 8.", "hi": "सरकारी / सहायता प्राप्त स्कूल में पढ़ना और कक्षा 8 में NMMS परीक्षा पास करना ज़रूरी।" }
+    ],
+    "documents": ["marksheet", "income_cert", "school_cert", "aadhaar", "bank_passbook"],
+    "channels": ["school_college", "online"],
+    "applyUrl": "https://scholarships.gov.in/",
+    "sourceUrl": "https://www.education.gov.in/",
+    "lastReviewed": "2026-11-17"
+  },
+  {
+    "id": "free-coaching-sc-obc",
+    "level": "central", "states": [],
+    "name": { "en": "Free Coaching for SC & OBC Students", "hi": "SC और OBC छात्रों के लिए मुफ़्त कोचिंग" },
+    "ministry": "Ministry of Social Justice & Empowerment",
+    "categories": ["education", "jobs"],
+    "benefit": { "en": "Free coaching for government job and entrance exams (UPSC, SSC, banking, JEE, NEET) with a monthly stipend.", "hi": "सरकारी नौकरी और प्रवेश परीक्षाओं (UPSC, SSC, बैंक, JEE, NEET) की मुफ़्त कोचिंग, मासिक भत्ते के साथ।" },
+    "description": { "en": "For SC and OBC students with family income up to ₹8 lakh.", "hi": "SC और OBC छात्रों के लिए जिनके परिवार की आय ₹8 लाख तक है।" },
+    "benefitValue": 40000,
+    "eligibility": { "all": [
+      { "field": "category", "op": "in", "value": ["sc", "obc"] },
+      { "field": "education", "op": "in", "value": ["class11to12", "college"] },
+      { "field": "income", "op": "lte", "value": 800000 }
+    ] },
+    "conditions": [],
+    "documents": ["caste_cert", "income_cert", "marksheet", "aadhaar"],
+    "channels": ["online"],
+    "applyUrl": "https://coaching.dosje.gov.in/",
+    "sourceUrl": "https://socialjustice.gov.in/",
+    "lastReviewed": "2026-11-17"
+  },
+  {
+    "id": "day-nrlm",
+    "level": "central", "states": [],
+    "name": { "en": "DAY-NRLM Self-Help Groups (Lakhpati Didi)", "hi": "दीनदयाल अंत्योदय योजना – स्वयं सहायता समूह (लखपति दीदी)" },
+    "ministry": "Ministry of Rural Development",
+    "categories": ["women_child", "business", "jobs"],
+    "benefit": { "en": "Join a women's Self-Help Group to save together, get bank loans at low interest, training and help to start a livelihood.", "hi": "महिला स्वयं सहायता समूह से जुड़कर मिलकर बचत करें, कम ब्याज पर बैंक लोन, ट्रेनिंग और रोज़गार शुरू करने में मदद पाएँ।" },
+    "description": { "en": "For rural women, especially from poor families.", "hi": "गाँव की महिलाओं के लिए, ख़ासकर ग़रीब परिवारों की।" },
+    "benefitValue": 30000,
+    "eligibility": { "all": [
+      { "field": "gender", "op": "eq", "value": "female" },
+      { "field": "area", "op": "eq", "value": "rural" },
+      { "field": "age", "op": "gte", "value": 18 }
+    ] },
+    "conditions": [],
+    "documents": ["aadhaar", "bank_passbook", "photo"],
+    "channels": ["gram_panchayat", "district_office"],
+    "applyUrl": "https://aajeevika.gov.in/",
+    "sourceUrl": "https://aajeevika.gov.in/",
+    "lastReviewed": "2026-11-17"
+  },
+  {
+    "id": "up-kanya-sumangala",
+    "level": "state", "states": ["UP"],
+    "name": { "en": "Mukhyamantri Kanya Sumangala Yojana (UP)", "hi": "मुख्यमंत्री कन्या सुमंगला योजना (उत्तर प्रदेश)" },
+    "ministry": "Govt. of Uttar Pradesh – Women & Child Development",
+    "categories": ["women_child", "education"],
+    "benefit": { "en": "₹25,000 for your daughter, given in 6 stages from birth to admission in graduation.", "hi": "बेटी को ₹25,000, जन्म से ग्रेजुएशन में दाख़िले तक 6 चरणों में।" },
+    "description": { "en": "For UP families with income up to ₹3 lakh; up to 2 daughters per family.", "hi": "उत्तर प्रदेश के परिवार जिनकी आय ₹3 लाख तक है; प्रति परिवार अधिकतम 2 बेटियाँ।" },
+    "benefitValue": 25000,
+    "eligibility": { "all": [
+      { "field": "state", "op": "eq", "value": "UP" },
+      { "field": "girlChildUnder10", "op": "eq", "value": true },
+      { "field": "income", "op": "lte", "value": 300000 }
+    ] },
+    "conditions": [],
+    "documents": ["birth_cert", "aadhaar", "income_cert", "residence_proof", "bank_passbook"],
+    "channels": ["online", "csc"],
+    "applyUrl": "https://mksy.up.gov.in/",
+    "sourceUrl": "https://mksy.up.gov.in/",
+    "lastReviewed": "2026-11-17"
+  },
+  {
+    "id": "br-kanya-utthan",
+    "level": "state", "states": ["BR"],
+    "name": { "en": "Mukhyamantri Kanya Utthan Yojana (Bihar)", "hi": "मुख्यमंत्री कन्या उत्थान योजना (बिहार)" },
+    "ministry": "Govt. of Bihar – Education Department",
+    "categories": ["women_child", "education"],
+    "benefit": { "en": "₹25,000 for unmarried girls who pass Class 12, and ₹50,000 for girls who complete graduation.", "hi": "12वीं पास अविवाहित लड़कियों को ₹25,000 और ग्रेजुएशन पूरा करने पर ₹50,000।" },
+    "description": { "en": "Encourages girls in Bihar to continue their studies.", "hi": "बिहार की लड़कियों को पढ़ाई जारी रखने के लिए प्रोत्साहन।" },
+    "benefitValue": 25000,
+    "eligibility": { "all": [
+      { "field": "state", "op": "eq", "value": "BR" },
+      { "field": "gender", "op": "eq", "value": "female" },
+      { "field": "education", "op": "in", "value": ["class11to12", "college"] }
+    ] },
+    "conditions": [
+      { "en": "Applications open on the portal after results are declared.", "hi": "रिज़ल्ट आने के बाद पोर्टल पर आवेदन खुलते हैं।" }
+    ],
+    "documents": ["marksheet", "aadhaar", "bank_passbook", "residence_proof"],
+    "channels": ["online"],
+    "applyUrl": "https://medhasoft.bihar.gov.in/",
+    "sourceUrl": "https://medhasoft.bihar.gov.in/",
+    "lastReviewed": "2026-11-17"
+  },
+  {
+    "id": "mh-ladki-bahin",
+    "level": "state", "states": ["MH"],
+    "name": { "en": "Mukhyamantri Majhi Ladki Bahin Yojana (Maharashtra)", "hi": "मुख्यमंत्री माझी लाडकी बहीण योजना (महाराष्ट्र)" },
+    "ministry": "Govt. of Maharashtra – Women & Child Development",
+    "categories": ["women_child"],
+    "benefit": { "en": "₹1,500 every month directly into the woman's bank account.", "hi": "हर महीने ₹1,500 सीधे महिला के बैंक खाते में।" },
+    "description": { "en": "For women aged 21–65 in Maharashtra with family income up to ₹2.5 lakh.", "hi": "महाराष्ट्र की 21–65 साल की महिलाएँ जिनके परिवार की आय ₹2.5 लाख तक है।" },
+    "benefitValue": 18000,
+    "eligibility": { "all": [
+      { "field": "state", "op": "eq", "value": "MH" },
+      { "field": "gender", "op": "eq", "value": "female" },
+      { "field": "age", "op": "between", "value": [21, 65] },
+      { "field": "income", "op": "lte", "value": 250000 },
+      { "field": "taxPayer", "op": "eq", "value": false }
+    ] },
+    "conditions": [],
+    "documents": ["aadhaar", "residence_proof", "income_cert", "bank_passbook", "ration_card"],
+    "channels": ["online", "anganwadi"],
+    "applyUrl": "https://ladakibahin.maharashtra.gov.in/",
+    "sourceUrl": "https://ladakibahin.maharashtra.gov.in/",
+    "lastReviewed": "2026-11-17"
+  },
+  {
+    "id": "mp-ladli-behna",
+    "level": "state", "states": ["MP"],
+    "name": { "en": "Mukhyamantri Ladli Behna Yojana (Madhya Pradesh)", "hi": "मुख्यमंत्री लाड़ली बहना योजना (मध्य प्रदेश)" },
+    "ministry": "Govt. of Madhya Pradesh – Women & Child Development",
+    "categories": ["women_child"],
+    "benefit": { "en": "Monthly money (₹1,250 or more) directly into the woman's bank account.", "hi": "हर महीने पैसा (₹1,250 या ज़्यादा) सीधे महिला के बैंक खाते में।" },
+    "description": { "en": "For married, widowed or separated women aged 21–60 in MP with family income up to ₹2.5 lakh.", "hi": "मध्य प्रदेश की 21–60 साल की विवाहित, विधवा या परित्यक्ता महिलाएँ जिनके परिवार की आय ₹2.5 लाख तक है।" },
+    "benefitValue": 15000,
+    "eligibility": { "all": [
+      { "field": "state", "op": "eq", "value": "MP" },
+      { "field": "gender", "op": "eq", "value": "female" },
+      { "field": "age", "op": "between", "value": [21, 60] },
+      { "field": "maritalStatus", "op": "in", "value": ["married", "widowed", "separated"] },
+      { "field": "income", "op": "lte", "value": 250000 },
+      { "field": "taxPayer", "op": "eq", "value": false }
+    ] },
+    "conditions": [
+      { "en": "New registrations open only in certain rounds — check the portal or your Gram Panchayat / ward office.", "hi": "नए पंजीकरण सिर्फ़ कुछ चरणों में खुलते हैं — पोर्टल या ग्राम पंचायत / वार्ड कार्यालय से जानकारी लें।" }
+    ],
+    "documents": ["aadhaar", "residence_proof", "bank_passbook"],
+    "channels": ["gram_panchayat", "online"],
+    "applyUrl": "https://cmladlibahna.mp.gov.in/",
+    "sourceUrl": "https://cmladlibahna.mp.gov.in/",
+    "lastReviewed": "2026-11-17"
+  },
+  {
+    "id": "od-subhadra",
+    "level": "state", "states": ["OD"],
+    "name": { "en": "Subhadra Yojana (Odisha)", "hi": "सुभद्रा योजना (ओडिशा)" },
+    "ministry": "Govt. of Odisha – Women & Child Development",
+    "categories": ["women_child"],
+    "benefit": { "en": "₹10,000 every year for 5 years (₹50,000 in total) in two instalments, to the woman's bank account.", "hi": "5 साल तक हर साल ₹10,000 (कुल ₹50,000), दो किस्तों में महिला के बैंक खाते में।" },
+    "description": { "en": "For women aged 21–60 in Odisha.", "hi": "ओडिशा की 21–60 साल की महिलाओं के लिए।" },
+    "benefitValue": 10000,
+    "eligibility": { "all": [
+      { "field": "state", "op": "eq", "value": "OD" },
+      { "field": "gender", "op": "eq", "value": "female" },
+      { "field": "age", "op": "between", "value": [21, 60] },
+      { "field": "taxPayer", "op": "eq", "value": false },
+      { "any": [
+        { "field": "rationCard", "op": "in", "value": ["aay", "phh"] },
+        { "field": "income", "op": "lte", "value": 250000 }
+      ] }
+    ] },
+    "conditions": [],
+    "documents": ["aadhaar", "ration_card", "bank_passbook"],
+    "channels": ["online", "anganwadi", "csc"],
+    "applyUrl": "https://subhadra.odisha.gov.in/",
+    "sourceUrl": "https://subhadra.odisha.gov.in/",
+    "lastReviewed": "2026-11-17"
+  },
+  {
+    "id": "tn-magalir-urimai",
+    "level": "state", "states": ["TN"],
+    "name": { "en": "Kalaignar Magalir Urimai Thogai (Tamil Nadu)", "hi": "कलैग्नर मगलिर उरिमई तोगई (तमिलनाडु)" },
+    "ministry": "Govt. of Tamil Nadu",
+    "categories": ["women_child"],
+    "benefit": { "en": "₹1,000 every month to the woman head of the family.", "hi": "परिवार की मुखिया महिला को हर महीने ₹1,000।" },
+    "description": { "en": "For women heads of families in Tamil Nadu with income up to ₹2.5 lakh.", "hi": "तमिलनाडु में परिवार की मुखिया महिलाएँ जिनकी आय ₹2.5 लाख तक है।" },
+    "benefitValue": 12000,
+    "eligibility": { "all": [
+      { "field": "state", "op": "eq", "value": "TN" },
+      { "field": "gender", "op": "eq", "value": "female" },
+      { "field": "age", "op": "gte", "value": 21 },
+      { "field": "income", "op": "lte", "value": 250000 },
+      { "field": "taxPayer", "op": "eq", "value": false }
+    ] },
+    "conditions": [],
+    "documents": ["aadhaar", "ration_card", "bank_passbook", "electricity_bill"],
+    "channels": ["online", "district_office"],
+    "applyUrl": "https://kmut.tn.gov.in/",
+    "sourceUrl": "https://kmut.tn.gov.in/",
+    "lastReviewed": "2026-11-17"
+  },
+  {
+    "id": "ka-gruha-lakshmi",
+    "level": "state", "states": ["KA"],
+    "name": { "en": "Gruha Lakshmi (Karnataka)", "hi": "गृह लक्ष्मी (कर्नाटक)" },
+    "ministry": "Govt. of Karnataka – Women & Child Development",
+    "categories": ["women_child"],
+    "benefit": { "en": "₹2,000 every month to the woman head of the household.", "hi": "घर की मुखिया महिला को हर महीने ₹2,000।" },
+    "description": { "en": "For women heads of households in Karnataka (ration card holders).", "hi": "कर्नाटक में घर की मुखिया महिलाओं के लिए (राशन कार्ड धारक)।" },
+    "benefitValue": 24000,
+    "eligibility": { "all": [
+      { "field": "state", "op": "eq", "value": "KA" },
+      { "field": "gender", "op": "eq", "value": "female" },
+      { "field": "age", "op": "gte", "value": 18 },
+      { "field": "taxPayer", "op": "eq", "value": false }
+    ] },
+    "conditions": [
+      { "en": "You must be listed as head of the family on the ration card. Families with a GST filer or tax payer are not eligible.", "hi": "राशन कार्ड पर आप परिवार की मुखिया होनी चाहिए। GST या टैक्स भरने वाले परिवार पात्र नहीं।" }
+    ],
+    "documents": ["aadhaar", "ration_card", "bank_passbook"],
+    "channels": ["online", "csc"],
+    "applyUrl": "https://sevasindhugs.karnataka.gov.in/",
+    "sourceUrl": "https://sevasindhugs.karnataka.gov.in/",
+    "lastReviewed": "2026-11-17"
+  }
+]

@@ -1,0 +1,27 @@
+{
+  "name": "sahayak",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sahayak — helps people in rural India find government schemes they may be eligible for.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "validate:data": "tsx scripts/validate-data.ts"
+  },
+  "dependencies": {
+    "lucide-react": "^1.73.0",
+    "next": "^16.4.6",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3"
+  }
+}

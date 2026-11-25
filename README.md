@@ -1,0 +1,61 @@
+# Sahayak · सहायक
+
+**Find the government schemes you may be eligible for, in simple Hindi or English, with voice.**
+
+Many people in rural India never hear about the schemes meant for them, or can't search dozens of
+government websites. With Sahayak, a person (or a CSC / ASHA / Anganwadi worker helping them) answers
+a few simple questions. Sahayak then shows the **top 10 schemes** for them, explains *why* each one fits,
+lists the documents needed, and links to the **official** website to apply.
+
+## Features
+
+- **Two-step form**: basic details, then household and needs. Every field is optional.
+- **Explainable matching**: a rule engine checks 56 central and state schemes and shows reasons and items to confirm.
+- **Free AI (optional)**: Google Gemini re-orders the shortlist and writes a plain-language summary per scheme. It can't invent schemes or links.
+- **English and Hindi**, with read-aloud for results and dictation for the needs box.
+- **Private**: no login and no database. Answers stay on the device, and we never ask for Aadhaar, bank or OTP numbers.
+- **Official links only**: Apply buttons go only to `gov.in` / `nic.in` portals.
+- **Works on weak internet**: an installable PWA. Matching runs on the device and works offline.
+- **Sample profiles** for demos, and a WhatsApp share button for every scheme.
+
+## Run it
+
+```bash
+npm install
+cp .env.example .env        # optional: add a free GEMINI_API_KEY from https://aistudio.google.com/apikey
+npm run dev                 # open http://localhost:3000
+```
+
+The site works fully without any API key. The key only adds AI explanations.
+
+**Production:** `npm run build && npm start`
+
+**Deploy for free:** push to GitHub, then import the repo on [vercel.com](https://vercel.com). Add `GEMINI_API_KEY`
+under *Settings → Environment Variables*. Voice input needs HTTPS, which Vercel provides.
+
+## Demo script (2 minutes)
+
+1. Home page: switch **EN / हिं** in the header to show both languages.
+2. **Sample profiles → "Widow, farm labourer, UP"**: widow pension, rural employment, free LPG, housing and toilet support, each with reasons and an AI summary.
+3. Open a scheme: eligibility checked against the profile, document checklist, where to apply, the **official Apply** button, and the helpline.
+4. **Check eligibility**: fill step 1 (about 7 fields) and step 2 (household and needs), then show that blank fields still work.
+5. Privacy page: everything stays on the device, with a delete button.
+
+## How it works
+
+```
+Questions ──► Profile (on phone) ──► Rule engine (pass / fail / unknown per rule)
+                                          │
+                       data/schemes.json ─┘──► score & rank ──► Top 10 + reasons
+                                                                    │
+                                     optional Gemini: re-order + simple "why" (IDs from shortlist only)
+```
+
+Tech: Next.js 16, React 19, TypeScript, zod, Web Speech API, Gemini free tier. No paid services.
+
+## Adding schemes
+
+Edit `data/schemes.json` (see `CLAUDE.md` for the format), then run `npm run validate:data`.
+
+> Sahayak is an independent student project, not a government website. Scheme details can change, so always
+> confirm on the official portal before applying.
