@@ -1,7 +1,7 @@
-# CLAUDE.md — Sahayak (सहायक)
+# CLAUDE.md — Yojana Setu (योजना सेतु)
 
-Sahayak helps people in rural India with low literacy or limited internet find the government
-schemes they may be eligible for. A user fills a short two-step form (English or Hindi). Sahayak
+Yojana Setu helps people in rural India with low literacy or limited internet find the government
+schemes they may be eligible for. A user fills a short two-step form (English or Hindi). Yojana Setu
 then shows the **top 10 schemes**, each with plain-language reasons, a document checklist and the
 **official** link to apply.
 
@@ -28,7 +28,13 @@ npm run validate:data  # run after ANY edit to data/schemes.json
 - **Optional AI**: Google Gemini free tier (`GEMINI_API_KEY` in `.env`), or Groq as an alternative. The model chain is
   `GEMINI_MODEL` → `gemini-flash-lite-latest` → `gemini-flash-latest`. Use the `-latest` aliases because specific Gemini versions get retired.
 - **Voice**: the browser's Web Speech API (free, no key). "Listen" reads results and schemes aloud, and "Dictate" fills the free-text need box.
-- Plain CSS in `src/app/globals.css` (no Tailwind, no UI kit) and `lucide-react` for icons.
+- Plain CSS in `src/app/globals.css` (no Tailwind, no UI kit) and `lucide-react` for icons. A few **ReactBits** components
+  (TS + CSS variants, in `src/components/reactbits/`) add motion: SpotlightCard, CountUp, GradientText, ShinyText.
+  Theme them with the app's CSS variables (ShinyText computes colors in JS, so pass resolved values via `useCssVar`).
+- **OCR**: Tesseract.js (eng + hin) in the browser, loaded only when the user taps "Scan a document". `src/lib/core/ocr-extract.ts`
+  turns the text into profile answers; Aadhaar-shaped and other long numbers are stripped first, and the user confirms each field.
+- **WhatsApp bot**: Meta WhatsApp Cloud API webhook at `/api/whatsapp`. The bot (`src/lib/whatsapp/bot.ts`) is pure and stateless:
+  the answers so far ride in each reply id, so there is no database. `?dry=1` simulates it in development.
 
 ## Layout
 
@@ -50,7 +56,11 @@ src/lib/speech.ts            # read-aloud (TTS) + dictation (speech recognition)
 src/lib/demo.ts              # sample personas for "Try an example" (?demo=farmer|widow|student|mother)
 src/lib/i18n/strings.ts      # every UI string, hi + en
 src/app/                     # pages: / , /profile (two-step form), /results, /scheme/[id], /schemes, /privacy
-src/components/              # Header/Footer, SchemeCard, Voice, icons (category/channel → lucide)
+src/components/              # Header/Footer, SchemeCard, Voice, DocScan (OCR), icons (+ BrandMark logo)
+src/components/reactbits/    # ReactBits components (SpotlightCard, CountUp, GradientText, ShinyText)
+src/lib/core/ocr-extract.ts  # OCR text → profile answers (pure)
+src/lib/whatsapp/            # bot.ts (stateless chat flow, pure) + cloud.ts (Cloud API transport)
+src/app/api/whatsapp         # WhatsApp webhook (GET verify, POST messages)
 src/app/api/enhance          # AI re-rank + simple "why" (shortlist IDs only)
 src/app/api/need             # AI free-text need → categories
 scripts/validate-data.ts

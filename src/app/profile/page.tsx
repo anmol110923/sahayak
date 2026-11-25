@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { useApp } from "@/components/AppProvider";
 import { CategoryIcon } from "@/components/icons";
+import { DocScan } from "@/components/DocScan";
 import { MicButton } from "@/components/Voice";
 import { visibleFields, type FieldDef } from "@/lib/core/fields";
 import { CATEGORY_INFO } from "@/lib/core/labels";
@@ -117,6 +118,10 @@ export default function ProfilePage() {
           else finish();
         }}
       >
+        {step === 1 && (
+          <DocScan onApply={(found) => persist({ ...profile, answers: prune({ ...profile.answers, ...found }), done: false })} />
+        )}
+
         <div className="form-grid">
           {mainFields.map((f) => (
             <FieldControl key={f.key} def={f} value={profile.answers[f.key]} onChange={(v) => setAnswer(f.key, v)} />

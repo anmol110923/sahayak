@@ -2,19 +2,31 @@
 // except the optional, non-identifying AI requests.
 import { emptyProfile, type Profile } from "./core/types";
 
-const KEYS = { profile: "sahayak.profile.v1", lang: "sahayak.lang" };
+const KEYS = { profile: "yojanasetu.profile.v1", lang: "yojanasetu.lang" };
+/** Keys used before the rename to Yojana Setu. Read once, then moved to the new keys. */
+const LEGACY: Record<string, string> = { [KEYS.profile]: "sahayak.profile.v1", [KEYS.lang]: "sahayak.lang" };
 
 function read(key: string): string | null {
   try {
-    return localStorage.getItem(key);
+    const v = localStorage.getItem(key);
+    const old = LEGACY[key];
+    if (v !== null || !old) return v;
+    const legacy = localStorage.getItem(old);
+    if (legacy !== null) {
+      localStorage.setItem(key, legacy);
+      localStorage.removeItem(old);
+    }
+    return legacy;
   } catch {
     return null;
   }
 }
 function write(key: string, value: string | null) {
   try {
-    if (value === null) localStorage.removeItem(key);
-    else localStorage.setItem(key, value);
+    if (value === null) {
+      localStorage.removeItem(key);
+      if (LEGACY[key]) localStorage.removeItem(LEGACY[key]);
+    } else localStorage.setItem(key, value);
   } catch {
     /* private mode / storage blocked — app still works for this session */
   }

@@ -1,15 +1,17 @@
 import type { Lang } from "../core/types";
 
 const S = {
-  appName: { hi: "सहायक", en: "Sahayak" },
+  appName: { hi: "योजना सेतु", en: "Yojana Setu" },
   appTag: { hi: "सरकारी योजना खोज", en: "Scheme Finder" },
 
   // Home
   heroEyebrow: { hi: "केंद्र और राज्य सरकार की योजनाएँ", en: "Central and state government schemes" },
   heroTitle: { hi: "जानिए आप किन सरकारी योजनाओं के पात्र हो सकते हैं", en: "Find the government schemes you may be eligible for" },
+  heroTitleA: { hi: "जानिए आप किन सरकारी योजनाओं के", en: "Find the government schemes" },
+  heroTitleB: { hi: "पात्र हो सकते हैं", en: "you may be eligible for" },
   heroSub: {
-    hi: "दो छोटे चरणों में अपनी जानकारी भरें। सहायक सैकड़ों पात्रता नियमों की जाँच करके आपके लिए सबसे उपयुक्त 10 योजनाएँ, ज़रूरी दस्तावेज़ और आधिकारिक आवेदन लिंक दिखाता है।",
-    en: "Fill in a short two-step form. Sahayak checks hundreds of eligibility rules and shows the 10 best-suited schemes, the documents you need, and the official link to apply.",
+    hi: "दो छोटे चरणों में अपनी जानकारी भरें। योजना सेतु सैकड़ों पात्रता नियमों की जाँच करके आपके लिए सबसे उपयुक्त 10 योजनाएँ, ज़रूरी दस्तावेज़ और आधिकारिक आवेदन लिंक दिखाता है।",
+    en: "Fill in a short two-step form. Yojana Setu checks hundreds of eligibility rules and shows the 10 best-suited schemes, the documents you need, and the official link to apply.",
   },
   start: { hi: "पात्रता जाँचें", en: "Check eligibility" },
   continue: { hi: "फ़ॉर्म जारी रखें", en: "Continue form" },
@@ -30,11 +32,17 @@ const S = {
   examplesSub: { hi: "फ़ॉर्म भरे बिना देखें कि परिणाम कैसे दिखते हैं।", en: "See how results look without filling the form." },
   viewResults: { hi: "परिणाम देखें", en: "View results" },
   categoriesTitle: { hi: "श्रेणी के अनुसार योजनाएँ", en: "Schemes by category" },
+  waTitle: { hi: "व्हाट्सऐप पर भी", en: "Also on WhatsApp" },
+  waSub: {
+    hi: "वही सवाल, चैट में। “Hi” भेजें, टैप करके जवाब दें और अपनी योजनाएँ, दस्तावेज़ सूची और आवेदन लिंक पाएँ।",
+    en: "The same questions, as a chat. Send “Hi”, answer by tapping, and get your schemes, document checklist and apply links.",
+  },
+  waCta: { hi: "व्हाट्सऐप पर चैट करें", en: "Chat on WhatsApp" },
   trustTitle: { hi: "भरोसेमंद और सुरक्षित", en: "Private and trustworthy" },
   trust1: { hi: "आपकी जानकारी सिर्फ़ आपके डिवाइस पर रहती है।", en: "Your details stay on your device only." },
   trust2: { hi: "हम आधार, बैंक खाता नंबर या OTP कभी नहीं माँगते।", en: "We never ask for Aadhaar, bank account numbers or OTPs." },
   trust3: { hi: "हर आवेदन लिंक आधिकारिक सरकारी वेबसाइट पर जाता है।", en: "Every apply link goes to an official government website." },
-  trust4: { hi: "सहायक मुफ़्त है — आवेदन के लिए किसी को पैसे न दें।", en: "Sahayak is free. Never pay anyone to apply." },
+  trust4: { hi: "योजना सेतु मुफ़्त है — आवेदन के लिए किसी को पैसे न दें।", en: "Yojana Setu is free. Never pay anyone to apply." },
   helperNote: {
     hi: "CSC संचालक, आशा या आंगनवाड़ी कार्यकर्ता किसी और की ओर से फ़ॉर्म भर सकते हैं और “नई प्रोफ़ाइल” से अगले व्यक्ति के लिए शुरू कर सकते हैं।",
     en: "CSC operators, ASHA and Anganwadi workers can fill the form on someone's behalf and use “New profile” for the next person.",
@@ -61,6 +69,19 @@ const S = {
   back: { hi: "पीछे", en: "Back" },
   next: { hi: "आगे बढ़ें", en: "Continue" },
   showSchemes: { hi: "योजनाएँ दिखाएँ", en: "Show my schemes" },
+  scanTitle: { hi: "दस्तावेज़ से जल्दी भरें", en: "Fill faster from a document" },
+  scanSub: {
+    hi: "वैकल्पिक। राशन कार्ड या आय, जाति या दिव्यांगता प्रमाण पत्र की फ़ोटो लें। इसे इसी फ़ोन पर पढ़ा जाता है, कहीं अपलोड नहीं होता। आधार या बैंक दस्तावेज़ स्कैन न करें।",
+    en: "Optional. Photograph a ration card, or an income, caste or disability certificate. It is read on this phone and never uploaded. Don't scan Aadhaar or bank documents.",
+  },
+  scanButton: { hi: "दस्तावेज़ स्कैन करें", en: "Scan a document" },
+  scanReading: { hi: "दस्तावेज़ पढ़ा जा रहा है… पहली बार में थोड़ा समय लगता है।", en: "Reading the document… the first scan takes a little longer." },
+  scanFound: { hi: "हमें ये जानकारी मिली। जो गलत हो उसका निशान हटा दें।", en: "We found these details. Untick anything that's wrong." },
+  scanApply: { hi: "ये जानकारी भरें", en: "Fill these in" },
+  scanDiscard: { hi: "रद्द करें", en: "Discard" },
+  scanApplied: { hi: "जानकारी भर दी गई है। कृपया नीचे जाँच लें।", en: "Details filled in. Please check them below." },
+  scanNothing: { hi: "कोई जानकारी पढ़ी नहीं जा सकी। अच्छी रोशनी में साफ़ फ़ोटो लें, या फ़ॉर्म खुद भरें।", en: "Couldn't read any details. Try a clearer photo in good light, or fill the form yourself." },
+  scanFailed: { hi: "पहली बार स्कैन करने के लिए इंटरनेट चाहिए। कृपया फ़ॉर्म खुद भरें।", en: "The first scan needs an internet connection. Please fill the form yourself." },
   privacyLine: { hi: "आपकी जानकारी सिर्फ़ इस डिवाइस पर सेव होती है। हम आधार, बैंक या OTP नहीं माँगते।", en: "Your answers are saved only on this device. We never ask for Aadhaar, bank or OTP details." },
 
   // Results
@@ -112,8 +133,8 @@ const S = {
   home: { hi: "होम", en: "Home" },
   privacy: { hi: "गोपनीयता", en: "Privacy" },
   footer: {
-    hi: "सहायक एक स्वतंत्र, निःशुल्क सेवा है और कोई सरकारी वेबसाइट नहीं है। सभी आवेदन आधिकारिक सरकारी पोर्टलों पर होते हैं।",
-    en: "Sahayak is an independent, free service and not a government website. All applications are made on official government portals.",
+    hi: "योजना सेतु एक स्वतंत्र, निःशुल्क सेवा है और कोई सरकारी वेबसाइट नहीं है। सभी आवेदन आधिकारिक सरकारी पोर्टलों पर होते हैं।",
+    en: "Yojana Setu is an independent, free service and not a government website. All applications are made on official government portals.",
   },
 } satisfies Record<string, Record<Lang, string>>;
 

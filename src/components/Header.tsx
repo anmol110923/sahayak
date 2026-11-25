@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useApp } from "./AppProvider";
+import { BrandMark } from "./icons";
 
 export function Header() {
   const { lang, setLang, t } = useApp();
@@ -17,10 +18,10 @@ export function Header() {
       <div className="container topbar-inner">
         <Link href="/" className="brand" aria-label={t("home")}>
           <span className="brand-mark" aria-hidden>
-            स
+            <BrandMark />
           </span>
           <span className="brand-text">
-            <strong>Sahayak</strong>
+            <strong>{t("appName")}</strong>
             <small>{t("appTag")}</small>
           </span>
         </Link>
@@ -50,7 +51,7 @@ export function Footer() {
     <footer className="footer">
       <div className="container footer-inner">
         <div>
-          <strong>Sahayak</strong>
+          <strong>{t("appName")}</strong>
           <p className="muted">{t("footer")}</p>
         </div>
         <nav className="footer-links">

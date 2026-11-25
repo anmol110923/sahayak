@@ -1,10 +1,10 @@
-# Sahayak · सहायक
+# Yojana Setu · योजना सेतु
 
 **Find the government schemes you may be eligible for, in simple Hindi or English, with voice.**
 
 Many people in rural India never hear about the schemes meant for them, or can't search dozens of
-government websites. With Sahayak, a person (or a CSC / ASHA / Anganwadi worker helping them) answers
-a few simple questions. Sahayak then shows the **top 10 schemes** for them, explains *why* each one fits,
+government websites. With Yojana Setu, a person (or a CSC / ASHA / Anganwadi worker helping them) answers
+a few simple questions. Yojana Setu then shows the **top 10 schemes** for them, explains *why* each one fits,
 lists the documents needed, and links to the **official** website to apply.
 
 ## Features
@@ -16,6 +16,8 @@ lists the documents needed, and links to the **official** website to apply.
 - **Private**: no login and no database. Answers stay on the device, and we never ask for Aadhaar, bank or OTP numbers.
 - **Official links only**: Apply buttons go only to `gov.in` / `nic.in` portals.
 - **Works on weak internet**: an installable PWA. Matching runs on the device and works offline.
+- **Scan a document (OCR)**: photograph a ration card or an income, caste or disability certificate to pre-fill the form. OCR runs on the phone (Tesseract.js); the photo is never uploaded and the user confirms every detected field.
+- **WhatsApp bot**: the same questions as a tap-to-answer chat in Hindi or English, with results, document checklists and official apply links. Stateless, with no database.
 - **Sample profiles** for demos, and a WhatsApp share button for every scheme.
 
 ## Run it
@@ -32,6 +34,24 @@ The site works fully without any API key. The key only adds AI explanations.
 
 **Deploy for free:** push to GitHub, then import the repo on [vercel.com](https://vercel.com). Add `GEMINI_API_KEY`
 under *Settings → Environment Variables*. Voice input needs HTTPS, which Vercel provides.
+
+## WhatsApp bot setup (free)
+
+1. On [developers.facebook.com](https://developers.facebook.com), create an app, add the **WhatsApp** product, and note the
+   test phone number's **Phone number ID** and a **temporary access token**.
+2. Fill in `WHATSAPP_TOKEN`, `WHATSAPP_PHONE_NUMBER_ID`, `WHATSAPP_VERIFY_TOKEN` (any random string) and `WHATSAPP_APP_SECRET`
+   in `.env` (or in Vercel's environment variables).
+3. Under *WhatsApp → Configuration*, set the webhook URL to `https://<your-site>/api/whatsapp` with the same verify token,
+   and subscribe to **messages**. Webhooks need a public HTTPS URL, so deploy first (or use a tunnel when testing locally).
+4. Add your own number as a test recipient and send "Hi".
+
+**Try it without Meta:** with `npm run dev` running, simulate the chat locally:
+
+```bash
+curl -s -X POST 'http://localhost:3000/api/whatsapp?dry=1' -d '{"text":"hi"}'
+```
+
+Then send the `id` of any button or row back as `{"id":"..."}`. The simulator is disabled in production builds.
 
 ## Demo script (2 minutes)
 
@@ -51,11 +71,11 @@ Questions ──► Profile (on phone) ──► Rule engine (pass / fail / unkn
                                      optional Gemini: re-order + simple "why" (IDs from shortlist only)
 ```
 
-Tech: Next.js 16, React 19, TypeScript, zod, Web Speech API, Gemini free tier. No paid services.
+Tech: Next.js 16, React 19, TypeScript, zod, Web Speech API, Tesseract.js (on-device OCR), ReactBits UI components, WhatsApp Cloud API, Gemini free tier. No paid services.
 
 ## Adding schemes
 
 Edit `data/schemes.json` (see `CLAUDE.md` for the format), then run `npm run validate:data`.
 
-> Sahayak is an independent student project, not a government website. Scheme details can change, so always
+> Yojana Setu is an independent student project, not a government website. Scheme details can change, so always
 > confirm on the official portal before applying.
