@@ -33,7 +33,9 @@ const cut = (s: string, n: number) => (s.length <= n ? s : `${s.slice(0, n - 1).
 
 // ---------- Conversation state ----------
 type Key = "st" | "ar" | "ag" | "g" | "c" | "in" | "oc" | "rc" | "ms" | "nd";
-type State = { lang: Lang; a: Partial<Record<Key, string>> };
+/** The bot speaks English and Hindi. */
+type BotLang = Extract<Lang, "en" | "hi">;
+type State = { lang: BotLang; a: Partial<Record<Key, string>> };
 const SKIP = "_";
 
 export function encode(s: State): string {

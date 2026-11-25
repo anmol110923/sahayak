@@ -59,6 +59,11 @@ src/app/                     # pages: / , /profile (two-step form), /results, /s
 src/components/              # Header/Footer, SchemeCard, Voice, DocScan (OCR), icons (+ BrandMark logo)
 src/components/reactbits/    # ReactBits components (SpotlightCard, CountUp, GradientText, ShinyText)
 src/lib/core/ocr-extract.ts  # OCR text → profile answers (pure)
+src/lib/core/voice-answer.ts # spoken transcript → form answer (pure)
+src/lib/share.ts             # shareable results link (?p=), validated decode
+src/lib/useDocs.ts           # "documents I have" (localStorage) + readiness
+src/lib/i18n/                # strings.*.ts, content.*.ts, words.ts (grammar per language), apply.ts
+src/app/compare, src/app/print # side-by-side compare; printable summary with QR codes
 src/lib/whatsapp/            # bot.ts (stateless chat flow, pure) + cloud.ts (Cloud API transport)
 src/app/api/whatsapp         # WhatsApp webhook (GET verify, POST messages)
 src/app/api/enhance          # AI re-rank + simple "why" (shortlist IDs only)
@@ -86,7 +91,11 @@ scripts/validate-data.ts
   and `step`), and use it in at least one scheme rule. The validator fails if a field is unused.
 - **Rule format:** `{ "field": "age", "op": "between", "value": [18, 40] }`, nested with `{ "all": [...] }` and `{ "any": [...] }`.
   Ops: `eq, in, notIn, gte, lte, between`. Range fields (income, land, disability) compare by their option ranges.
-- **New UI text** goes in `strings.ts` with both languages. Never hard-code visible text.
+- **New UI text** goes in `strings.ts` (en + hi) **and** in `strings.bn.ts`, `strings.mr.ts`, `strings.ta.ts` (TypeScript fails if a key is missing). Never hard-code visible text.
+- **Languages**: `en, hi` are complete everywhere. `bn, mr, ta` cover the UI, form, labels and scheme names + benefits
+  (`src/lib/i18n/content.*.ts`, `data/i18n/schemes.*.json`, merged at startup by `src/lib/i18n/apply.ts`). Scheme descriptions and
+  conditions fall back via `pick()` (Marathi → Hindi, Bengali/Tamil → English). Always render `Text` with `tx()` / `pick()`, never `x[lang]`.
+  Keep amounts as digits in translations; the numbers must match the English text exactly. The WhatsApp bot stays English/Hindi.
 - **Design rules (from the user):** professional look, **no emojis anywhere** (use `lucide-react` icons), and keep the form
   to **two steps** (`step: 1 | 2` on each field in `fields.ts`) with compact controls: selects, segmented buttons, Yes/No toggles.
   Every field is optional; blank means "unknown". The default language is English, with a Hindi toggle in the header.

@@ -1,4 +1,7 @@
 import type { Lang } from "../core/types";
+import bn from "./strings.bn";
+import mr from "./strings.mr";
+import ta from "./strings.ta";
 
 const S = {
   appName: { hi: "योजना सेतु", en: "Yojana Setu" },
@@ -117,6 +120,65 @@ const S = {
   listen: { hi: "सुनें", en: "Listen" },
   stop: { hi: "रोकें", en: "Stop" },
 
+  // Share, print, nearest
+  shareResults: { hi: "परिणाम का लिंक शेयर करें", en: "Share results link" },
+  linkCopied: { hi: "लिंक कॉपी हो गया। जिसके पास यह लिंक होगा वह ये जवाब देख सकता है।", en: "Link copied. Anyone with the link can see these answers." },
+  sharedBanner: { hi: "आप शेयर किए गए परिणाम देख रहे हैं। इस डिवाइस पर कुछ सेव नहीं हुआ है।", en: "You're viewing shared results. Nothing has been saved on this device." },
+  useShared: { hi: "ये जवाब अपनाएँ", en: "Use these answers" },
+  printSummary: { hi: "सारांश प्रिंट करें", en: "Print summary" },
+  findCsc: { hi: "नज़दीकी CSC खोजें", en: "Find nearest CSC" },
+  findNearest: { hi: "नज़दीकी खोजें", en: "Find nearest" },
+
+  // Document checklist
+  myDocs: { hi: "मेरे दस्तावेज़", en: "My documents" },
+  myDocsSub: { hi: "जो दस्तावेज़ आपके पास हैं उन पर निशान लगाएँ। यह इसी डिवाइस पर सेव रहता है।", en: "Tick the documents you already have. Saved on this device only." },
+  docsReady: { hi: "सभी दस्तावेज़ तैयार", en: "All documents ready" },
+  docsMissing: { hi: "बाकी दस्तावेज़", en: "Missing documents" },
+  readyCount: { hi: "योजनाओं के सभी दस्तावेज़ तैयार", en: "schemes have every document ready" },
+
+  // Near misses
+  missedTitle: { hi: "जो योजनाएँ थोड़े से रह गईं", en: "Schemes you just missed" },
+  missedSub: {
+    hi: "हर योजना सिर्फ़ एक जवाब की वजह से नहीं मिली। अगर वह जवाब गलत है, तो अपनी जानकारी बदलें।",
+    en: "Each of these failed on just one answer. If that answer is wrong, edit your details.",
+  },
+  missedNeeds: { hi: "शर्त", en: "Needs" },
+  yourAnswer: { hi: "आपका जवाब", en: "Your answer" },
+
+  // Compare
+  compare: { hi: "तुलना", en: "Compare" },
+  compareHint: { hi: "3 योजनाओं तक चुनकर तुलना करें", en: "Pick up to 3 schemes to compare" },
+  compareTitle: { hi: "योजनाओं की तुलना", en: "Compare schemes" },
+  compareSelected: { hi: "चुनी गईं", en: "selected" },
+  compareEmpty: { hi: "तुलना के लिए परिणाम पेज पर कम से कम 2 योजनाएँ चुनें।", en: "Pick at least two schemes on the results page to compare them." },
+  clear: { hi: "हटाएँ", en: "Clear" },
+  schemeType: { hi: "प्रकार", en: "Type" },
+  whoCanApply: { hi: "कौन आवेदन कर सकता है", en: "Who can apply" },
+  forYou: { hi: "आपके लिए", en: "For you" },
+
+  // Print
+  printTitle: { hi: "योजना सारांश", en: "Scheme summary" },
+  printDate: { hi: "तारीख", en: "Date" },
+  printScanResults: { hi: "ये परिणाम फ़ोन पर खोलने के लिए स्कैन करें", en: "Scan to open these results on a phone" },
+  printScanApply: { hi: "आवेदन के लिए स्कैन करें", en: "Scan to apply" },
+  printNow: { hi: "प्रिंट करें", en: "Print" },
+  printHave: { hi: "पास है", en: "Have it" },
+
+  // Voice answering
+  voiceMode: { hi: "बोलकर जवाब दें", en: "Answer by voice" },
+  voiceIntro: { hi: "हर सवाल पढ़कर सुनाया जाएगा। अपना जवाब बोलें, या विकल्प पर टैप करें।", en: "Each question is read aloud. Speak your answer, or tap an option." },
+  voiceSpeak: { hi: "बोलें", en: "Speak" },
+  voiceRepeat: { hi: "दोबारा सुनें", en: "Repeat" },
+  voiceSkip: { hi: "छोड़ें", en: "Skip" },
+  voiceHeard: { hi: "सुना", en: "Heard" },
+  voiceNoMatch: { hi: "जवाब समझ नहीं आया। फिर से बोलें या विकल्प पर टैप करें।", en: "Didn't catch that. Try again or tap an option." },
+  voiceDone: { hi: "सारे सवाल हो गए। नीचे फ़ॉर्म जाँच लें।", en: "All questions done. Check the form below." },
+  voiceClose: { hi: "बंद करें", en: "Close" },
+  voiceQuestion: { hi: "सवाल", en: "Question" },
+  voiceYouCanSay: { hi: "आप बोल सकते हैं", en: "You can say" },
+  voiceAgeHint: { hi: "अपनी उम्र बोलें, जैसे “पैंतीस” या “35”", en: "Say your age, like “thirty five” or “35”" },
+  language: { hi: "भाषा", en: "Language" },
+
   // Browse / detail
   allSchemes: { hi: "सभी योजनाएँ", en: "All schemes" },
   allSchemesSub: { hi: "केंद्र और राज्य सरकार की योजनाएँ, श्रेणी के अनुसार।", en: "Central and state government schemes by category." },
@@ -136,8 +198,11 @@ const S = {
     hi: "योजना सेतु एक स्वतंत्र, निःशुल्क सेवा है और कोई सरकारी वेबसाइट नहीं है। सभी आवेदन आधिकारिक सरकारी पोर्टलों पर होते हैं।",
     en: "Yojana Setu is an independent, free service and not a government website. All applications are made on official government portals.",
   },
-} satisfies Record<string, Record<Lang, string>>;
+} satisfies Record<string, { hi: string; en: string }>;
 
 export type StringKey = keyof typeof S;
 export const STRINGS = S;
-export const translate = (key: StringKey, lang: Lang) => S[key][lang];
+/** Bengali, Marathi and Tamil live in their own files (complete: TypeScript checks every key). */
+const EXTRA: Record<Exclude<Lang, "en" | "hi">, Record<StringKey, string>> = { bn, mr, ta };
+
+export const translate = (key: StringKey, lang: Lang): string => (lang === "en" || lang === "hi" ? S[key][lang] : EXTRA[lang][key]);

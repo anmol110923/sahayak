@@ -6,7 +6,7 @@ import { Check, FileScan, ScanText, X } from "lucide-react";
 import { useRef, useState } from "react";
 import { answerLabel, FIELD_MAP } from "@/lib/core/fields";
 import { extractFromText, type Extracted } from "@/lib/core/ocr-extract";
-import type { FieldKey } from "@/lib/core/types";
+import { pick, type FieldKey } from "@/lib/core/types";
 import { useApp } from "./AppProvider";
 
 type State =
@@ -31,7 +31,15 @@ async function downscale(file: File, max = 2000): Promise<Blob | File> {
   }
 }
 
-export function DocScan({ onApply }: { onApply: (answers: Extracted) => void }) {
+/** Which document a scanned field most likely came from, so it can be ticked in "My documents". */
+const DOC_FOR: Partial<Record<FieldKey, string>> = {
+  rationCard: "ration_card",
+  income: "income_cert",
+  category: "caste_cert",
+  disability: "disability_cert",
+};
+
+export function DocScan({ onApply }: { onApply: (answers: Extracted, docIds: string[]) => void }) {
   const { t, lang } = useApp();
   const input = useRef<HTMLInputElement>(null);
   const [state, setState] = useState<State>({ kind: "idle" });
@@ -40,7 +48,9 @@ export function DocScan({ onApply }: { onApply: (answers: Extracted) => void }) 
     setState({ kind: "reading", progress: 0 });
     try {
       const { createWorker } = await import("tesseract.js");
-      const worker = await createWorker(["eng", "hin"], 1, {
+      // English + Hindi always (most documents are bilingual), plus the reader's own script.
+      const extra = { bn: "ben", mr: "mar", ta: "tam" } as Record<string, string>;
+      const worker = await createWorker(["eng", "hin", ...(extra[lang] ? [extra[lang]] : [])], 1, {
         logger: (m) => {
           if (m.status === "recognizing text") setState({ kind: "reading", progress: m.progress });
         },
@@ -113,7 +123,7 @@ export function DocScan({ onApply }: { onApply: (answers: Extracted) => void }) 
                         setState({ ...state, picked });
                       }}
                     />
-                    <span className="scan-item-label">{FIELD_MAP[k].label[lang]}</span>
+                    <span className="scan-item-label">{pick(FIELD_MAP[k].label, lang)}</span>
                     <span className="scan-item-value">{answerLabel(FIELD_MAP[k], state.found[k]!, lang)}</span>
                   </label>
                 </li>
@@ -129,7 +139,9 @@ export function DocScan({ onApply }: { onApply: (answers: Extracted) => void }) 
               className="btn btn-primary btn-sm"
               disabled={state.picked.size === 0}
               onClick={() => {
-                onApply(Object.fromEntries([...state.picked].map((k) => [k, state.found[k]])) as Extracted);
+                const picked = [...state.picked];
+                const docIds = picked.map((k) => DOC_FOR[k]).filter((d): d is string => !!d);
+                onApply(Object.fromEntries(picked.map((k) => [k, state.found[k]])) as Extracted, docIds);
                 setState({ kind: "message", text: t("scanApplied"), tone: "ok" });
               }}
             >

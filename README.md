@@ -1,6 +1,6 @@
 # Yojana Setu · योजना सेतु
 
-**Find the government schemes you may be eligible for, in simple Hindi or English, with voice.**
+**Find the government schemes you may be eligible for, in English, Hindi, Bengali, Marathi or Tamil, with voice.**
 
 Many people in rural India never hear about the schemes meant for them, or can't search dozens of
 government websites. With Yojana Setu, a person (or a CSC / ASHA / Anganwadi worker helping them) answers
@@ -12,7 +12,12 @@ lists the documents needed, and links to the **official** website to apply.
 - **Two-step form**: basic details, then household and needs. Every field is optional.
 - **Explainable matching**: a rule engine checks 56 central and state schemes and shows reasons and items to confirm.
 - **Free AI (optional)**: Google Gemini re-orders the shortlist and writes a plain-language summary per scheme. It can't invent schemes or links.
-- **English and Hindi**, with read-aloud for results and dictation for the needs box.
+- **Five languages**: English, Hindi, Bengali, Marathi and Tamil, with read-aloud for results and dictation for the needs box.
+- **Answer by voice**: every question is read aloud and answered by speaking (numbers, amounts like "50 हज़ार", yes/no, option names), with tap targets as a fallback.
+- **Document checklist**: tick the documents you have; every result shows "All documents ready" or what's missing. Scanned documents tick themselves.
+- **Why not eligible?**: schemes missed on a single, fixable answer (income bracket, ration card, bank account, age near a limit).
+- **Compare** up to 3 schemes side by side, **print** a one-page summary with QR codes for helpers to hand over, and **share** results as a link (answers ride in the link; no server storage).
+- **Find nearest**: CSC, bank, post office and other places to apply open in maps ("near me"); the app never reads your location.
 - **Private**: no login and no database. Answers stay on the device, and we never ask for Aadhaar, bank or OTP numbers.
 - **Official links only**: Apply buttons go only to `gov.in` / `nic.in` portals.
 - **Works on weak internet**: an installable PWA. Matching runs on the device and works offline.
